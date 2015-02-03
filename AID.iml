@@ -11,5 +11,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="net.sf.sociaal:freetts:1.2.2" level="project" />
     <orderEntry type="library" name="cmu_us_kal-1.2.2" level="project" />
+    <orderEntry type="library" name="sphinx4" level="project" />
+    <orderEntry type="library" name="RM1_8gau_13dCep_16k_40mel_130Hz_6800Hz" level="project" />
+    <orderEntry type="library" name="jsapi" level="project" />
   </component>
 </module>
