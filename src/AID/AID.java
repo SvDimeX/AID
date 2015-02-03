@@ -1,6 +1,7 @@
 package AID;
 
 import AID.io.AddPisitionsToConfig;
+import AID.voice.Synthesizer;
 
 import java.io.*;
 import java.util.*;
@@ -31,7 +32,7 @@ public class AID {
     }
 
     public static void main(String[] args) throws IOException {
-
+       Synthesizer.speak("Hello I am freeTTS");
 
     }
 }
