@@ -1,5 +1,6 @@
 package AID;
 
+import AID.form.MainForm;
 import AID.io.AddPisitionsToConfig;
 import AID.voice.Synthesizer;
 
@@ -33,6 +34,6 @@ public class AID {
 
     public static void main(String[] args) throws IOException {
        Synthesizer.speak("Hello I am freeTTS");
-
+        new MainForm();
     }
 }

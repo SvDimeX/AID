@@ -14,5 +14,6 @@
     <orderEntry type="library" name="sphinx4" level="project" />
     <orderEntry type="library" name="RM1_8gau_13dCep_16k_40mel_130Hz_6800Hz" level="project" />
     <orderEntry type="library" name="jsapi" level="project" />
+    <orderEntry type="library" name="log4j:log4j:1.2.17" level="project" />
   </component>
 </module>
