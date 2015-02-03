@@ -1,8 +1,8 @@
 package AID;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import AID.io.AddPisitionsToConfig;
+
+import java.io.*;
 import java.util.*;
 
 public class AID {
@@ -28,12 +28,10 @@ public class AID {
                 text=key+" "+map2.get(key).get(0);
                 System.out.println(text);
             }
-
-
     }
 
-    public static void main(String[] args) {
-        System.out.println("Init Project:");
-        new AID().a();
+    public static void main(String[] args) throws IOException {
+
+
     }
 }
