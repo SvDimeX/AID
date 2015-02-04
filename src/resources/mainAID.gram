@@ -1,0 +1,17 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Hello World example
+ */
+
+grammar mainAID;
+
+/* public <greet> = (Good morning | Hello) ( Bhiksha | Evandro | Paul | Philip | Rita | Will ); */
+
+/* public <greet> = (music | banshee) (show | play | stop | next | back | silent); */
+public <music_command> =    banshee show |  play music | stop music | pause music |
+                    next music | music back | music silent;
+
+public <menu_command> =  Aid already | Aid stop | close system;
+
+public <command> = <menu_command> | <music_command>;

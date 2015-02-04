@@ -1,14 +1,13 @@
 package AID;
 
 import AID.form.MainForm;
-import AID.io.AddPisitionsToConfig;
+import AID.voice.StartRecognize;
 import AID.voice.Synthesizer;
 
 import java.io.*;
 import java.util.*;
 
 public class AID {
-
     public void a() {
         String text;
         // create map
@@ -23,7 +22,6 @@ public class AID {
         for (String key : map.keySet()) {
 //            System.out.print(map.get(key).get(0) + " " + map.get(key).get(1)+" "+map.get(key).get(2));
             text=key+" "+map.get(key).get(0) + " " + map.get(key).get(1)+" "+map.get(key).get(2);
-
             System.out.println(text);
         }
             for (String key : map2.keySet()) {
@@ -32,8 +30,9 @@ public class AID {
             }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InstantiationException {
        Synthesizer.speak("Hello I am freeTTS");
         new MainForm();
+        new StartRecognize();
     }
 }
