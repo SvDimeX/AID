@@ -8,10 +8,17 @@ grammar mainAID;
 
 /* public <greet> = (Good morning | Hello) ( Bhiksha | Evandro | Paul | Philip | Rita | Will ); */
 
-/* public <greet> = (music | banshee) (show | play | stop | next | back | silent); */
-public <music_command> =    banshee show |  play music | stop music | pause music |
-                    next music | music back | music silent;
+public <general_command> =  open music control | close music control | open mouse control | close mouse control
+                            open telephone control | close telephone control | shut down computer;
 
-public <menu_command> =  Aid already | Aid stop | close system;
+public <menu_command> =  AID come back | AID off | close system | yes | no | Show all command;
 
-public <command> = <menu_command> | <music_command>;
+public <music_command> =    banshee show | banshee hide |  play music | stop music |
+                            pause music | next music | music back |
+                            volume zero | volume max | half volume;
+
+public <mouse_command> =  left click | right click;
+
+public <skype_command> =  call to mother;
+
+public <command> = <general_command> | <menu_command> | <music_command> | <mouse_command> | <skype_command> ;

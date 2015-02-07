@@ -30,8 +30,8 @@ public class AID {
             }
     }
 
-    public static void main(String[] args) throws IOException, InstantiationException {
-       Synthesizer.speak("Hello I am freeTTS");
+    public static void main(String[] args) throws Exception {
+       Synthesizer.speak(" AID system initializing...");
         new MainForm();
         new StartRecognize();
     }

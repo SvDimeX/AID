@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: RM1_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar TIDIGITS_8gau_1
+ 3dCep_16k_40mel_130Hz_6800Hz.jar WSJ_8gau_13dCep_16k_40mel_130Hz_6800
+ Hz.jar sphinx4.jar log4j-1.2.17.jar javaee-api-5.0-2.jar freetts-1.2.
+ 2.jar jsapi.jar cmu_us_kal-1.2.2.jar
+Main-Class: AID.AID
+

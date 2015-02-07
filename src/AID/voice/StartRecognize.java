@@ -17,10 +17,10 @@ import java.net.URL;
 public class StartRecognize {
     /**
      * Програма для розпізнавання мовлення, теоретично розпізнає заздалегідь приготовлені команди */
-    public StartRecognize() {
+    public StartRecognize() throws Exception {
         ConfigurationManager cm;
         LogicCore logicCore = new LogicCore();
-        Synthesizer.speak("Please Speak:");
+        Synthesizer.speak("I am omline and ready!:");
         URL url;
         url = StartRecognize.class.getResource("mainAID.config.xml");
         cm = new ConfigurationManager(url);

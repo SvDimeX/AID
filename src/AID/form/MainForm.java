@@ -26,7 +26,7 @@ public class MainForm extends JDialog{
         log.info("PERPIXEL_TRANSPARENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSPARENT));
         log.info("PERPIXEL_TRANSLUCENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSLUCENT));
 
-        String arg = "src/resources/png/AIDcalosc1.png";
+        String arg = "src/resources/png/AID.png";
         ImageIcon icon = new ImageIcon(arg);
         setIconImage(icon.getImage());
         JPanel panel = new JPanel();
