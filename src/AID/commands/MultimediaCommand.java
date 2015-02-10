@@ -40,6 +40,45 @@ public class MultimediaCommand {
         if (recString.contains("volume max")) {
             run.runCommand("banshee --set-volume=100");
         }
+        if (recString.contains("close banshee")) {
+            run.runCommand("killall banshee");
+        }
+
+    }
+    public static void totemCommand(String recString) {
+        if (recString.contains("totem show")) {
+            run.runCommand("totem");
+        }
+        if (recString.contains("play video")) {
+            run.runCommand("totem --play");
+        }
+        if (recString.contains("pause video ")) {
+            run.runCommand("totem --play-pause");
+        }
+        if (recString.contains("video stop")) {
+            run.runCommand("totem --pause");
+        }
+        if (recString.contains("next video")) {
+            run.runCommand("totem --next");
+        }
+        if (recString.contains("previous video")) {
+            run.runCommand("totem --previous");
+        }
+        if (recString.contains("back video")) {
+            run.runCommand("totem --seek-bwd");
+        }
+        if (recString.contains("forward video")) {
+            run.runCommand("totem --seek-fwd");
+        }
+        if (recString.contains("volume up")) {
+            run.runCommand("totem --volume-up");
+        }
+        if (recString.contains("volume down")) {
+            run.runCommand("totem --volume-down");
+        }
+        if (recString.contains("close totem")) {
+            run.runCommand("killall totem");
+        }
     }
     public static void skypeCommand(String recString){
         if (recString.contains("call to mother")){
