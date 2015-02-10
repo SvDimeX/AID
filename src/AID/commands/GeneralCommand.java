@@ -9,21 +9,22 @@ import AID.voice.Synthesizer;
  */
 public class GeneralCommand {
     static IOCommand run = new IOCommand();
-    static boolean preclose=false, preShotDown=false;
-    public static void generalCommand(String recString){
+    static boolean preclose = false, preShotDown = false;
 
-        if (recString.contains("close system")) {
+    public static void generalCommand(String recString) {
+
+        if (recString.contains("close aid system")) {
             Synthesizer.speak("You are sure?");
-            preclose=true;
+            preclose = true;
         }
         if (recString.contains("no")) {
-            preclose=false;
+            preclose = false;
         }
-        if ((recString.contains("yes"))&& preclose==true) {
+        if ((recString.contains("yes")) && preclose == true) {
             System.exit(0);
         }
 
-        if (recString.contains("show all command")){
+        if (recString.contains("show all command")) {
             System.out.println("#-------------Start---------------#");
             System.out.println("Show all command");
             System.out.println("AID off");
@@ -42,25 +43,35 @@ public class GeneralCommand {
             System.out.println("#-------------End----------------#");
         }
 
+        if (recString.contains("open music folder")) {
+            run.runCommand("xdg-open ~/Music");
+        }
+        if (recString.contains("open video folder")) {
+            run.runCommand("xdg-open ~/Videos");
+        }
+
+
+
+
+
         if (recString.contains("shut down computer")) {
             Synthesizer.speak("You are sure?");
-            preShotDown=true;
+            preShotDown = true;
         }
         if (recString.contains("no")) {
-            preShotDown=false;
+            preShotDown = false;
         }
-        if ((recString.contains("yes"))&& preShotDown==true) {
+        if ((recString.contains("yes")) && preShotDown == true) {
             String operatingSystem = System.getProperty("os.name");
-//            if ("Linux".equals(operatingSystem) || "Mac OS X".equals(operatingSystem)) {
-//shutdown: Need to be root
-            run.runCommand("shutdown -h now");
-            System.exit(0);
-//            }
-//            else if ("Windows".equals(operatingSystem)) {
-//                run.runCommand("shutdown.exe -s -t 0");
-//            }
-//            else {
-//                throw new RuntimeException("Unsupported operating system.");
+            if ("Linux".equals(operatingSystem) || "Mac OS X".equals(operatingSystem)) {
+                //TODO shutdown: Need to be root
+                run.runCommand("shutdown -h now");
+                System.exit(0);
+            } else if ("Windows".equals(operatingSystem)) {
+                run.runCommand("shutdown.exe -s -t 0");
+            } else {
+                throw new RuntimeException("Unsupported operating system.");
+            }
         }
     }
 }

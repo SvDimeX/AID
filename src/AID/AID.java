@@ -4,7 +4,6 @@ import AID.form.MainForm;
 import AID.voice.StartRecognize;
 import AID.voice.Synthesizer;
 
-import java.io.*;
 import java.util.*;
 
 public class AID {
