@@ -1,7 +1,9 @@
 package AID.commands;
 
+import AID.form.CursorGrid;
 import AID.voice.Synthesizer;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
@@ -17,11 +19,15 @@ public class MouseCommand {
     static int minH=0;
     static int setW;
     static int setH;
-
+    static CursorGrid cursorGrid;
     public static void mouseCommand(String recString) throws Exception {
         Robot robot = new Robot();
 
         if (recString.contains("left click")) {
+            if (setPosition){
+                Window window = SwingUtilities.getWindowAncestor(cursorGrid);
+                window.dispose();
+            }
             minW=0;
             minH=0;
             maxW=dim.width;
@@ -31,6 +37,9 @@ public class MouseCommand {
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
         }
             if (recString.contains("middle click")) {
+                if (setPosition){
+                Window window = SwingUtilities.getWindowAncestor(cursorGrid);
+                window.dispose();}
                 minW=0;
                 minH=0;
                 maxW=dim.width;
@@ -40,6 +49,10 @@ public class MouseCommand {
                 robot.mouseRelease(InputEvent.BUTTON2_MASK);
             }
             if (recString.contains("right click")) {
+                if (setPosition){
+                    Window window = SwingUtilities.getWindowAncestor(cursorGrid);
+                    window.dispose();
+                }
                 minW=0;
                 minH=0;
                 maxW=dim.width;
@@ -51,6 +64,9 @@ public class MouseCommand {
 
             if (recString.contains("set position")) {
                 Synthesizer.speak("select sector, please");
+                if (setPosition==false){
+                    cursorGrid = new CursorGrid();
+                }
                 minW=0;
                 minH=0;
                 maxW=dim.width;
