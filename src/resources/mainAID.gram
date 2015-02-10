@@ -11,14 +11,15 @@ grammar mainAID;
 public <general_command> =  open music control | close music control | open mouse control | close mouse control
                             open telephone control | close telephone control | shut down computer;
 
-public <menu_command> =  AID come back | AID off | close system | yes | no | Show all command;
+public <menu_command> =     AID come back | AID off | close system | yes | no | Show all command;
 
 public <music_command> =    banshee show | banshee hide |  play music | stop music |
                             pause music | next music | music back |
                             volume zero | volume max | half volume;
 
-public <mouse_command> =  left click | right click;
+public <mouse_command> =    left click | right click | middle click | set position | set one | set two | set three |
+                            set four | set five | set six | set seven | set eight | set nine;
 
-public <skype_command> =  call to mother;
+public <skype_command> =    call to mother;
 
 public <command> = <general_command> | <menu_command> | <music_command> | <mouse_command> | <skype_command> ;

@@ -55,7 +55,6 @@ public class LogicCore {
                 mouseControl = false;
             }
 
-
             if ((skypeControl==false) && (recString.contains("open telephone control"))) {
                 Synthesizer.speak("skype control established");
                 skypeControl = true;
@@ -67,8 +66,6 @@ public class LogicCore {
                 Synthesizer.speak("skype control close");
                 skypeControl = false;
             }
-
-
 
             generalCommand.generalCommand(recString);
 

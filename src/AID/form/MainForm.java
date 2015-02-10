@@ -27,11 +27,12 @@ public class MainForm extends JDialog{
         log.info("PERPIXEL_TRANSLUCENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSLUCENT));
 
         String arg = "src/resources/png/AID.png";
+//        String arg = "src/resources/gif/Intro.gif";
         ImageIcon icon = new ImageIcon(arg);
-        setIconImage(icon.getImage());
+//        setIconImage(icon.getImage());
         JPanel panel = new JPanel();
         panel.setBackground(new Color(0,0,0,0));
-        JLabel label = new JLabel();
+        JLabel label = new JLabel(icon);
         label.setIcon(icon);// your image here
         panel.add(label);
         label.setLocation(120,120);
