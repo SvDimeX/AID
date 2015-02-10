@@ -3,8 +3,6 @@ package AID.commands;
 import AID.io.IOCommand;
 import AID.voice.Synthesizer;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 /**
  * Created by dima-sv on 2/7/15.
@@ -64,8 +62,5 @@ public class GeneralCommand {
 //            else {
 //                throw new RuntimeException("Unsupported operating system.");
         }
-
-
     }
-
 }
