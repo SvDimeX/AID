@@ -30,8 +30,9 @@ public class AID {
     }
 
     public static void main(String[] args) throws Exception {
-       Synthesizer.speak(" AID system initializing...");
+        Synthesizer.speak(" AID system initializing...");
         new MainForm();
+//        Synthesizer.speak("All system ready");
         new StartRecognize();
     }
 }

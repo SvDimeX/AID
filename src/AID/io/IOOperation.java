@@ -15,7 +15,7 @@ public class IOOperation {
         UserConf
     }
 
-    public HashMap readObjFile(String fileName) throws IOException, ClassNotFoundException {
+    public static HashMap readObjFile(String fileName) throws IOException, ClassNotFoundException {
         File file = new File(fileName);
         FileInputStream fileStream = new FileInputStream(file);
         ObjectInputStream objInpStream = new ObjectInputStream(fileStream);
@@ -24,7 +24,7 @@ public class IOOperation {
         return fileObj;
     }
 
-    public void writeObjFile(String fileName, HashMap<String, List<String>> hMap) throws IOException {
+    public static void writeObjFile(String fileName, HashMap<String, List<String>> hMap) throws IOException {
         File file = new File(fileName);
         FileOutputStream outStream = new FileOutputStream(file);
         ObjectOutputStream objOutStream = new ObjectOutputStream(outStream);
@@ -80,7 +80,7 @@ public class IOOperation {
     public void viewMap(HashMap <String, String> map){
         for (String key : map.keySet()) {
             System.out.print(key);
-            System.out.println(" - " + map.get(key));
+            System.out.println(": " + map.get(key));
         }
     }
 

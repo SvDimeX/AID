@@ -2,11 +2,9 @@ package AID.voice;
 
 import AID.core.LogicCore;
 import edu.cmu.sphinx.frontend.util.Microphone;
-import edu.cmu.sphinx.linguist.Linguist;
 import edu.cmu.sphinx.recognizer.Recognizer;
 import edu.cmu.sphinx.result.Result;
 import edu.cmu.sphinx.util.props.ConfigurationManager;
-import edu.cmu.sphinx.util.props.PropertyException;
 
 import java.io.IOException;
 import java.net.URL;

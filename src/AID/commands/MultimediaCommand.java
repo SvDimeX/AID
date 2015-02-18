@@ -11,37 +11,51 @@ public class MultimediaCommand {
 
     public static void bansheeCommand(String recString) {
         if (recString.contains("banshee show")) {
-            run.runCommand("banshee");
+            run.runCommand("amarok");
         }
-        if (recString.contains("banshee hide")) {
-            run.runCommand("banshee --hide");
-        }
+//        if (recString.contains("banshee hide")) {
+//            run.runCommand("banshee --hide");
+//        }
         if (recString.contains("play music")) {
-            run.runCommand("banshee --play");
+            run.runCommand("amarok --play");
         }
         if (recString.contains("pause music")) {
-            run.runCommand("banshee --pause");
+            run.runCommand("amarok --pause");
         }
         if (recString.contains("stop music")) {
-            run.runCommand("banshee --pause");
+            run.runCommand("amarok --pause");
         }
         if (recString.contains("next music")) {
-            run.runCommand("banshee --next");
+            run.runCommand("amarok --next");
         }
         if (recString.contains("music back")) {
-            run.runCommand("banshee --previous");
-        }
-        if (recString.contains("volume zero")) {
-            run.runCommand("banshee --set-volume=0");
-        }
-        if (recString.contains("half volume")) {
-            run.runCommand("banshee --set-volume=50");
-        }
-        if (recString.contains("volume max")) {
-            run.runCommand("banshee --set-volume=100");
+            run.runCommand("amarok --previous");
         }
         if (recString.contains("close banshee")) {
-            run.runCommand("killall banshee");
+            run.runCommand("killall amarok");
+
+        }
+//-----------------------------------------------------//
+        if (recString.contains("volume mute")) {
+            run.runCommand("amixer set Master mute");
+        }
+        if (recString.contains("volume unmute")) {
+            run.runCommand("amixer set Master unmute");
+        }
+        if (recString.contains("volume zero")) {
+            run.runCommand("amixer set Master 0 ");
+        }
+        if (recString.contains("half volume")) {
+            run.runCommand("amixer set Master 50 ");
+        }
+        if (recString.contains("volume max")) {
+            run.runCommand("amixer set Master 100");
+        }
+        if (recString.contains("volume up")) {
+            run.runCommand("amixer set Master 10%+");
+        }
+        if (recString.contains("volume down")) {
+            run.runCommand("amixer set Master 10%-");
         }
 
     }

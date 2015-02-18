@@ -15,7 +15,8 @@ public <general_command> =  open music control | close music control | open mous
 public <menu_command> =     AID come back | AID off transmitter | close aid system | yes | no | show all command;
 
 public <music_command> =    banshee show | banshee hide |  play music | stop music | pause music |
-                            next music | music back | volume zero | volume max | half volume | close banshee;
+                            next music | music back | close banshee |
+                            volume zero | volume max | half volume | volume mute | volume unmute | volume up | volume down;
 
 public <video_command> =    totem show |  play video | video stop | pause video | next video |
                             previous video | back video | forward video | volume up | volume down | close totem;
