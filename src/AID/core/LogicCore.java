@@ -5,11 +5,13 @@ import AID.commands.InternetCommand;
 import AID.commands.MouseCommand;
 import AID.commands.MultimediaCommand;
 import AID.io.IOCommand;
+import AID.io.IOOperation;
 import AID.io.InputOutputInterface;
 import AID.voice.Synthesizer;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
+import java.util.*;
 
 /**
  * Created by dima-sv on 2/3/15.
@@ -21,8 +23,10 @@ public class LogicCore {
     static MouseCommand mouseCommand = new MouseCommand();
     static GeneralCommand generalCommand = new GeneralCommand();
     static InternetCommand internetCommand = new InternetCommand();
+    static IOCommand run = new IOCommand();
 
     public static void whatDoing(String recString) throws Exception {
+        HashMap<String, java.util.List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
         if (recString.contains("aid come back")){
             Synthesizer.speak("I am online and ready!");
             listening = true;
@@ -33,13 +37,24 @@ public class LogicCore {
                 listening = false;
             }
 
+//            for (String key : basicConfig.keySet()) {
+//                if (recString.equalsIgnoreCase(basicConfig.get(key).get(0).toString())) {
+//                    run.runCommand(basicConfig.get(key).get(2).toString());
+//                    String text=key+": "+basicConfig.get(key).get(0) + " " + basicConfig.get(key).get(1)+" "+basicConfig.get(key).get(2);
+//                    System.out.println(text);
+//
+//                }
+//
+//            }
+
 
             if ((musicControl==false) && (recString.contains("open music control"))) {
                 Synthesizer.speak("music control established");
                 musicControl = true;
             }
             if (musicControl){
-                multimediaCommand.bansheeCommand(recString);
+//                multimediaCommand.bansheeCommand(recString);
+                multimediaCommand.multimediaCommand("music", recString);
             }
             if ((musicControl==true) && (recString.contains("close music control"))) {
                 Synthesizer.speak("music control close");
@@ -51,7 +66,7 @@ public class LogicCore {
                 videoControl = true;
             }
             if (videoControl){
-                multimediaCommand.totemCommand(recString);
+                multimediaCommand.multimediaCommand("video", recString);
             }
             if ((videoControl==true) && (recString.contains("close video control"))) {
                 Synthesizer.speak("video control closed");

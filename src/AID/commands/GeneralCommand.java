@@ -50,10 +50,6 @@ public class GeneralCommand {
             run.runCommand("xdg-open ~/Videos");
         }
 
-
-
-
-
         if (recString.contains("shut down computer")) {
             Synthesizer.speak("You are sure?");
             preShotDown = true;
