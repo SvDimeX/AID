@@ -1,5 +1,7 @@
 package AID.io;
 
+import org.apache.log4j.Logger;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.List;

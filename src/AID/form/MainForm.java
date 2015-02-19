@@ -10,7 +10,7 @@ import java.awt.*;
  * Created by dima-sv on 2/3/15.
  */
 public class MainForm extends JDialog{
-    private static final Logger log = Logger.getLogger(MainForm.class);
+    private static final Logger logger = Logger.getLogger(MainForm.class);
     public MainForm() {
 //        super("Main Form");
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -22,9 +22,9 @@ public class MainForm extends JDialog{
         setBackground(new Color(0, 0, 0, 0));
         setType(javax.swing.JFrame.Type.UTILITY);
 //        setShape(new Ellipse2D.Double(0,0,getWidth(),getHeight()));
-        log.info("TRANSLUCENT supported:         " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.TRANSLUCENT));
-        log.info("PERPIXEL_TRANSPARENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSPARENT));
-        log.info("PERPIXEL_TRANSLUCENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSLUCENT));
+        logger.warn("TRANSLUCENT supported:         " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.TRANSLUCENT));
+        logger.warn("PERPIXEL_TRANSPARENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSPARENT));
+        logger.warn("PERPIXEL_TRANSLUCENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSLUCENT));
 
         String arg = "src/resources/png/AID.png";
 //        String arg = "src/resources/gif/Intro.gif";

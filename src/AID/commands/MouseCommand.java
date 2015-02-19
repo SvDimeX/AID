@@ -25,8 +25,7 @@ public class MouseCommand {
 
         if (recString.contains("left click")) {
             if (setPosition){
-                Window window = SwingUtilities.getWindowAncestor(cursorGrid);
-                window.dispose();
+                cursorGrid.dispose();
             }
             minW=0;
             minH=0;
@@ -38,8 +37,8 @@ public class MouseCommand {
         }
             if (recString.contains("middle click")) {
                 if (setPosition){
-                Window window = SwingUtilities.getWindowAncestor(cursorGrid);
-                window.dispose();}
+                    cursorGrid.dispose();
+                }
                 minW=0;
                 minH=0;
                 maxW=dim.width;
@@ -50,8 +49,7 @@ public class MouseCommand {
             }
             if (recString.contains("right click")) {
                 if (setPosition){
-                    Window window = SwingUtilities.getWindowAncestor(cursorGrid);
-                    window.dispose();
+                    cursorGrid.dispose();
                 }
                 minW=0;
                 minH=0;

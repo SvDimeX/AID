@@ -5,6 +5,7 @@ import edu.cmu.sphinx.frontend.util.Microphone;
 import edu.cmu.sphinx.recognizer.Recognizer;
 import edu.cmu.sphinx.result.Result;
 import edu.cmu.sphinx.util.props.ConfigurationManager;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,6 +16,8 @@ import java.net.URL;
 public class StartRecognize {
     /**
      * Програма для розпізнавання мовлення, теоретично розпізнає заздалегідь приготовлені команди */
+
+    private static final Logger logger = Logger.getLogger(StartRecognize.class);
     public StartRecognize() throws Exception {
         ConfigurationManager cm;
         LogicCore logicCore = new LogicCore();
@@ -35,11 +38,13 @@ public class StartRecognize {
                 Result result = recognizer.recognize();
                 if (result != null) {
                     String resultText = result.getBestFinalResultNoFiller();
-                    System.out.println("You said: " + resultText + "\n");
+//                    System.out.println("You said: " + resultText);
+                    logger.info("Input text: " + resultText);
                     logicCore.whatDoing(resultText);
 
                 } else if (result == null) {
-                    System.out.println("I can't hear what you said.\n");
+//                    System.out.println("I can't hear what you said.\n");
+                    logger.info("Result string is Null");
                 }
 
                 //swapGrammar("goodbye");
@@ -57,12 +62,14 @@ public class StartRecognize {
                 //swapGrammar("hello");
             }
         } else {
-            System.out.println("Cannot start microphone.");
+//            System.out.println("Cannot start microphone.");
+            logger.error("Cannot start microphone.");
             recognizer.deallocate();
             System.exit(1);
         }
         if (!microphone.startRecording()) {
-            System.out.println("Can't Start Microphone");
+            logger.error("Cannot start microphone.");
+//            System.out.println("Can't Start Microphone");
             recognizer.deallocate();
             System.exit(0);
         }

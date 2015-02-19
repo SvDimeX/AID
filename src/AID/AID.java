@@ -1,19 +1,25 @@
 package AID;
 
+import AID.form.CommandTreeForm;
 import AID.form.MainForm;
+import AID.form.SystemPropForm;
 import AID.io.IOOperation;
 import AID.voice.StartRecognize;
 import AID.voice.Synthesizer;
+import org.apache.log4j.Logger;
 
 import java.util.*;
 
 public class AID {
-
+    private static final Logger logger = Logger.getLogger(AID.class);
     public static void main(String[] args) throws Exception {
         Synthesizer.speak(" AID system initializing...");
+        logger.info("AID system initializing...");
         new MainForm();
-//        Synthesizer.speak("All system ready");
+//        new CommandTreeForm();
         new StartRecognize();
+
+
 //        HashMap<String, List<String>> sysProp=IOOperation.loadProperties("src/resources/configuration/System.properties");
 //        System.out.println(sysProp.get("systType").get(0).toString());
 //        for (String key : sysProp.keySet()) {

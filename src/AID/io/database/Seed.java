@@ -74,7 +74,7 @@ public class Seed {
         basicConf.put("024", Arrays.asList(new String[]{"music",    "half volume",    "",     "amixer set Master 50"}));
         basicConf.put("025", Arrays.asList(new String[]{"music",    "volume max",     "",     "amixer set Master 100"}));
         basicConf.put("026", Arrays.asList(new String[]{"music",    "volume mute",    "",     "amixer set Master mute"}));
-        basicConf.put("027", Arrays.asList(new String[]{"music",    "volume unmute",  "",     "amixer set Master unmute"}));
+        basicConf.put("027", Arrays.asList(new String[]{"music",    "volume mute off",  "",     "amixer set Master unmute"}));
         basicConf.put("028", Arrays.asList(new String[]{"music",    "volume up",      "",     "amixer set Master 20+"}));
         basicConf.put("029", Arrays.asList(new String[]{"music",    "volume down",    "",     "amixer set Master 20-"}));
 

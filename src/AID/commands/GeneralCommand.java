@@ -1,5 +1,6 @@
 package AID.commands;
 
+import AID.form.CommandTreeForm;
 import AID.io.IOCommand;
 import AID.voice.Synthesizer;
 
@@ -24,23 +25,8 @@ public class GeneralCommand {
             System.exit(0);
         }
 
-        if (recString.contains("show all command")) {
-            System.out.println("#-------------Start---------------#");
-            System.out.println("Show all command");
-            System.out.println("AID off");
-            System.out.println("AID come back");
-            System.out.println("Close system && yes | no");
-            System.out.println("Banshee show");
-            System.out.println("Banshee hide");
-            System.out.println("Play music");
-            System.out.println("Stop music");
-            System.out.println("Pause music");
-            System.out.println("Next music");
-            System.out.println("Music back");
-            System.out.println("Volume zero");
-            System.out.println("Volume max");
-            System.out.println("Half volume");
-            System.out.println("#-------------End----------------#");
+        if (recString.contains("show command tree")) {
+            new CommandTreeForm();
         }
 
         if (recString.contains("open music folder")) {

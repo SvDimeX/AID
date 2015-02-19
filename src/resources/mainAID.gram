@@ -8,18 +8,18 @@ grammar mainAID;
 
 /* public <greet> = (Good morning | Hello) ( Bhiksha | Evandro | Paul | Philip | Rita | Will ); */
 
-public <general_command> =  open music control | close music control | open mouse control | close mouse control
-                            open telephone control | close telephone control | shut down computer |
-                            open video control | close video control | open internet control | close internet control;
+public <general_command> =  Enable music control | disable music control | Enable mouse control | Disable mouse control
+                            Enable telephone control | disable telephone control | shut down computer |
+                            Enable video control | disable video control | Enable internet control | disable internet control;
 
-public <menu_command> =     AID come back | AID off transmitter | close aid system | yes | no | show all command;
+public <menu_command> =     AID come back | AID off transmitter | close aid system | yes | no | show command tree;
 
 public <music_command> =    banshee show | banshee hide |  play music | stop music | pause music |
-                            next music | music back | close banshee |
-                            volume zero | volume max | half volume | volume mute | /* volume unmute |*/ volume up | volume down;
+                            next music | music back | close music player |
+                            volume zero | volume max | half volume | volume mute | volume mute off | volume up | volume down;
 
 public <video_command> =    totem show |  play video | video stop | pause video | next video |
-                            previous video | back video | forward video | volume up | volume down | close totem;
+                            previous video | back video | forward video | volume up | volume down | close video player;
 
 public <mouse_command> =    left click | right click | middle click | set position | set one | set two | set three |
                             set four | set five | set six | set seven | set eight | set nine;

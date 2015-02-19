@@ -1,5 +1,6 @@
 package AID.voice;
 
+import AID.io.IOCommand;
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 
@@ -12,9 +13,14 @@ public class Synthesizer {
     private static Voice voice;
 
     public static void speak(String textTS){
+        IOCommand run = new IOCommand();
+//        run.runCommand("amixer set Capture toggle");
+//        run.runCommand("amixer -c 1 sset Mic toggle"); //потрібно тільки для вбудованого мікрофону
         voice = voiceManager.getVoice(VOICE_NAME);
         voice.allocate();
         voice.speak(textTS);
         voice.deallocate();
+//        run.runCommand("amixer set Capture toggle");
+//        run.runCommand("amixer -c 1 sset Mic toggle");
     }
 }
