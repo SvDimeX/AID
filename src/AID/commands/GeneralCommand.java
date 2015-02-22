@@ -4,6 +4,9 @@ import AID.form.CommandTreeForm;
 import AID.io.IOCommand;
 import AID.voice.Synthesizer;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 
 /**
  * Created by dima-sv on 2/7/15.
@@ -55,5 +58,6 @@ public class GeneralCommand {
                 throw new RuntimeException("Unsupported operating system.");
             }
         }
+
     }
 }

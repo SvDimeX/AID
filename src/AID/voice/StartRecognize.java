@@ -1,6 +1,7 @@
 package AID.voice;
 
 import AID.core.LogicCore;
+import AID.form.SystemPropForm;
 import edu.cmu.sphinx.frontend.util.Microphone;
 import edu.cmu.sphinx.recognizer.Recognizer;
 import edu.cmu.sphinx.result.Result;
@@ -40,6 +41,7 @@ public class StartRecognize {
                     String resultText = result.getBestFinalResultNoFiller();
 //                    System.out.println("You said: " + resultText);
                     logger.info("Input text: " + resultText);
+                    System.out.println("Input text: " + resultText);
                     logicCore.whatDoing(resultText);
 
                 } else if (result == null) {

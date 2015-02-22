@@ -24,9 +24,11 @@ public <video_command> =    totem show |  play video | video stop | pause video 
 public <mouse_command> =    left click | right click | middle click | set position | set one | set two | set three |
                             set four | set five | set six | set seven | set eight | set nine;
 
-public <internet_command> = open browser | open face book page | close browser;
+public <internet_command> = open browser | open face book page | close browser ;
 
 public <open_folder_command> = open music folder | open video folder;
+
+public <keyboard_command> = Next tab | Page down | Page up | Switch window | Show menu | Reload page;
 
 public <skype_command> =    call to mother;
 

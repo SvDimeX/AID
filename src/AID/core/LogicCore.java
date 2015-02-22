@@ -1,9 +1,6 @@
 package AID.core;
 
-import AID.commands.GeneralCommand;
-import AID.commands.InternetCommand;
-import AID.commands.MouseCommand;
-import AID.commands.MultimediaCommand;
+import AID.commands.*;
 import AID.io.IOCommand;
 import AID.io.IOOperation;
 import AID.io.InputOutputInterface;
@@ -24,6 +21,7 @@ public class LogicCore {
     static GeneralCommand generalCommand = new GeneralCommand();
     static InternetCommand internetCommand = new InternetCommand();
     static IOCommand run = new IOCommand();
+    static KeyBoardCommand keyBoardCommand = new KeyBoardCommand();
 
     public static void whatDoing(String recString) throws Exception {
         HashMap<String, java.util.List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
@@ -111,7 +109,7 @@ public class LogicCore {
 
             generalCommand.generalCommand(recString);
 
-
+            keyBoardCommand.keyboardCommand(recString);
 
         }
     }
