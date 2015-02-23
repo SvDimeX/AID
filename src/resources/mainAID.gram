@@ -32,5 +32,7 @@ public <keyboard_command> = Next tab | Page down | Page up | Switch window | Sho
 
 public <skype_command> =    call to mother;
 
+/*
 public <command> =  <general_command> | <menu_command> | <music_command> | <video_command> |
                     <mouse_command> | <skype_command> ;
+                    */

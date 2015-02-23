@@ -1,14 +1,9 @@
 package AID;
 
-import AID.form.CommandTreeForm;
 import AID.form.MainForm;
-import AID.form.SystemPropForm;
-import AID.io.IOOperation;
 import AID.voice.StartRecognize;
 import AID.voice.Synthesizer;
 import org.apache.log4j.Logger;
-
-import java.util.*;
 
 public class AID {
     private static final Logger logger = Logger.getLogger(AID.class);
@@ -16,9 +11,13 @@ public class AID {
         Synthesizer.speak(" AID system initializing...");
         logger.info("AID system initializing...");
         new MainForm();
-//        new CommandTreeForm();
+
         new StartRecognize();
 
+//        new CommandTreeForm();
+//        HashMap<String, List<String>> basicConfig=IOOperation.loadProperties("src/resources/configuration/Basic.config");
+//        GenerateJSGF g = new GenerateJSGF();
+//        g.generate(basicConfig);
 
 //        HashMap<String, List<String>> sysProp=IOOperation.loadProperties("src/resources/configuration/System.properties");
 //        System.out.println(sysProp.get("systType").get(0).toString());
