@@ -9,12 +9,11 @@ public class AID {
     private static final Logger logger = Logger.getLogger(AID.class);
     public static void main(String[] args) throws Exception {
         Synthesizer.speak(" AID system initializing...");
-        logger.info("AID system initializing...");
+        logger.info("AID system Starting...");
         new MainForm();
 
         new StartRecognize();
 
-//        new CommandTreeForm();
 //        HashMap<String, List<String>> basicConfig=IOOperation.loadProperties("src/resources/configuration/Basic.config");
 //        GenerateJSGF g = new GenerateJSGF();
 //        g.generate(basicConfig);

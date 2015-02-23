@@ -45,8 +45,8 @@ public class SeedLinux {
         basicConf.put("AID_online", Arrays.asList(new String[]{"main","AID come back",        "I am online and ready!",   ""}));
         basicConf.put("AID_offline", Arrays.asList(new String[]{"main","AID off transmitter",  "All advanced regognition functions stoped!",    ""}));
         basicConf.put("AID_close", Arrays.asList(new String[]{"main","Close aid system",     "You are sure?",      ""}));
-        basicConf.put("yes", Arrays.asList(new String[]{"main","Yes",                  "",      ""}));
-        basicConf.put("no", Arrays.asList(new String[]{"main","No",                   "",      ""}));
+        basicConf.put("yes", Arrays.asList(new String[]{"main",     "Yes",                  "",      ""}));
+        basicConf.put("no", Arrays.asList(new String[]{"main",      "No",                   "",      ""}));
 
         basicConf.put("enable_music", Arrays.asList(new String[]{"control",  "Enable music control",   "", ""}));
         basicConf.put("disable_music", Arrays.asList(new String[]{"control",  "Disable music control",   "", ""}));
@@ -75,40 +75,40 @@ public class SeedLinux {
         basicConf.put("volume+20", Arrays.asList(new String[]{"volume",    "Volume up",      "",     "amixer set Master 20+"}));
         basicConf.put("volume-20", Arrays.asList(new String[]{"volume",    "Volume down",    "",     "amixer set Master 20-"}));
 
-        basicConf.put("030", Arrays.asList(new String[]{"video",    "show video player",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()}));
-        basicConf.put("031", Arrays.asList(new String[]{"video",    "play video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --play"}));
-        basicConf.put("032", Arrays.asList(new String[]{"video",    "video stop",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --pause"}));
-        basicConf.put("033", Arrays.asList(new String[]{"video",    "pause video",    "",   sysConf.get("defaultVideoPlayer").get(0).toString()+" --pause"}));
-        basicConf.put("034", Arrays.asList(new String[]{"video",    "next video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --next"}));
-        basicConf.put("035", Arrays.asList(new String[]{"video",    "previous video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --previous"}));
-        basicConf.put("036", Arrays.asList(new String[]{"video",    "forward video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --seek-fwd"}));
-        basicConf.put("037", Arrays.asList(new String[]{"video",    "back video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --seek-bwd"}));
-        basicConf.put("038", Arrays.asList(new String[]{"video",    "totem volume up",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --volume-up"}));
-        basicConf.put("039", Arrays.asList(new String[]{"video",    "totem volume down",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --volume-down"}));
-        basicConf.put("040", Arrays.asList(new String[]{"video",    "close totem",    "",    "killall "+sysConf.get("defaultVideoPlayer").get(0).toString()}));
+        basicConf.put("030", Arrays.asList(new String[]{"video",    "Show video player",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()}));
+        basicConf.put("031", Arrays.asList(new String[]{"video",    "Play video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --play"}));
+        basicConf.put("032", Arrays.asList(new String[]{"video",    "Video stop",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --pause"}));
+        basicConf.put("033", Arrays.asList(new String[]{"video",    "pause Video",    "",   sysConf.get("defaultVideoPlayer").get(0).toString()+" --pause"}));
+        basicConf.put("034", Arrays.asList(new String[]{"video",    "Next video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --next"}));
+        basicConf.put("035", Arrays.asList(new String[]{"video",    "Previous video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --previous"}));
+        basicConf.put("036", Arrays.asList(new String[]{"video",    "Forward video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --seek-fwd"}));
+        basicConf.put("037", Arrays.asList(new String[]{"video",    "Back video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --seek-bwd"}));
+        basicConf.put("038", Arrays.asList(new String[]{"video",    "Totem volume up",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --volume-up"}));
+        basicConf.put("039", Arrays.asList(new String[]{"video",    "Totem volume down",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --volume-down"}));
+        basicConf.put("040", Arrays.asList(new String[]{"video",    "Close totem",    "",    "killall "+sysConf.get("defaultVideoPlayer").get(0).toString()}));
 
-        basicConf.put("041", Arrays.asList(new String[]{"mouse",    "left click",    "",    ""}));
-        basicConf.put("042", Arrays.asList(new String[]{"mouse",    "right click",    "",    ""}));
-        basicConf.put("043", Arrays.asList(new String[]{"mouse",    "middle click",    "",    ""}));
-        basicConf.put("044", Arrays.asList(new String[]{"mouse",    "set position",    "",    ""}));
-        basicConf.put("045", Arrays.asList(new String[]{"mouse",    "set one",    "",    ""}));
-        basicConf.put("046", Arrays.asList(new String[]{"mouse",    "set two",    "",    ""}));
-        basicConf.put("047", Arrays.asList(new String[]{"mouse",    "set three",    "",    ""}));
-        basicConf.put("048", Arrays.asList(new String[]{"mouse",    "set four",    "",    ""}));
-        basicConf.put("049", Arrays.asList(new String[]{"mouse",    "set five",    "",    ""}));
-        basicConf.put("050", Arrays.asList(new String[]{"mouse",    "set six",    "",    ""}));
-        basicConf.put("051", Arrays.asList(new String[]{"mouse",    "set seven",    "",    ""}));
-        basicConf.put("052", Arrays.asList(new String[]{"mouse",    "set eight",    "",    ""}));
-        basicConf.put("053", Arrays.asList(new String[]{"mouse",    "set nine",    "",    ""}));
+        basicConf.put("041", Arrays.asList(new String[]{"mouse",    "Left click",    "",    ""}));
+        basicConf.put("042", Arrays.asList(new String[]{"mouse",    "Right click",    "",    ""}));
+        basicConf.put("043", Arrays.asList(new String[]{"mouse",    "Middle click",    "",    ""}));
+        basicConf.put("044", Arrays.asList(new String[]{"mouse",    "Set position",    "",    ""}));
+        basicConf.put("045", Arrays.asList(new String[]{"mouse",    "Set one",    "",    ""}));
+        basicConf.put("046", Arrays.asList(new String[]{"mouse",    "Set two",    "",    ""}));
+        basicConf.put("047", Arrays.asList(new String[]{"mouse",    "Set three",    "",    ""}));
+        basicConf.put("048", Arrays.asList(new String[]{"mouse",    "Set four",    "",    ""}));
+        basicConf.put("049", Arrays.asList(new String[]{"mouse",    "Set five",    "",    ""}));
+        basicConf.put("050", Arrays.asList(new String[]{"mouse",    "Set six",    "",    ""}));
+        basicConf.put("051", Arrays.asList(new String[]{"mouse",    "Set seven",    "",    ""}));
+        basicConf.put("052", Arrays.asList(new String[]{"mouse",    "Set eight",    "",    ""}));
+        basicConf.put("053", Arrays.asList(new String[]{"mouse",    "Set nine",    "",    ""}));
 
-        basicConf.put("054", Arrays.asList(new String[]{"oher",    "open browser",    "",    "x-www-browser"}));
-        basicConf.put("055", Arrays.asList(new String[]{"oher",    "open face book page",    "",    "xdg-open http://facebook.com"}));
-        basicConf.put("056", Arrays.asList(new String[]{"oher",    "close browser",    "",    "killall "+sysConf.get("defaultBrowser").get(0).toString()}));
-        basicConf.put("057", Arrays.asList(new String[]{"oher",    "open music folder",    "",    "xdg-open ~/Music"}));
-        basicConf.put("058", Arrays.asList(new String[]{"oher",    "open video folder",    "",    "xdg-open ~/Videos"}));
-        basicConf.put("059", Arrays.asList(new String[]{"oher",    "open home folder",    "",    "xdg-open ~/"}));
+        basicConf.put("054", Arrays.asList(new String[]{"oher",    "Open browser",    "",    "x-www-browser"}));
+        basicConf.put("055", Arrays.asList(new String[]{"oher",    "Open face book page",    "",    "xdg-open http://facebook.com"}));
+        basicConf.put("056", Arrays.asList(new String[]{"oher",    "Close browser",    "",    "killall "+sysConf.get("defaultBrowser").get(0).toString()}));
+        basicConf.put("057", Arrays.asList(new String[]{"oher",    "Open music folder",    "",    "xdg-open ~/Music"}));
+        basicConf.put("058", Arrays.asList(new String[]{"oher",    "Open video folder",    "",    "xdg-open ~/Videos"}));
+        basicConf.put("059", Arrays.asList(new String[]{"oher",    "Open home folder",    "",    "xdg-open ~/"}));
 
-        basicConf.put("060", Arrays.asList(new String[]{"oher",    "call to mother",    "",    "skype --callto gazduny"}));
+        basicConf.put("060", Arrays.asList(new String[]{"oher",    "Call to mother",    "",    "skype --callto gazduny"}));
 
         basicConf.put("page_up",    Arrays.asList(new String[]{"keyboard",   "Page up",    "",    ""}));
         basicConf.put("pahe_down",  Arrays.asList(new String[]{"keyboard",   "Page down",    "",    ""}));
@@ -121,7 +121,8 @@ public class SeedLinux {
 //        basicConf.put("0", Arrays.asList(new String[]{"",    "",    ""}));
 //        basicConf.put("0", Arrays.asList(new String[]{"",    "",    ""}));
 
-        basicConf.put("999", Arrays.asList(new String[]{"oher",    "show all command",    "",    ""}));
+        basicConf.put("show_tree", Arrays.asList(new String[]{"oher",    "Show command tree",    "",    ""}));
+        basicConf.put("close_tree", Arrays.asList(new String[]{"oher",    "Close command tree",    "",    ""}));
         for (String key : basicConf.keySet()) {
             String text=key+": "+basicConf.get(key).get(0) + " " + basicConf.get(key).get(1)+" "+basicConf.get(key).get(2)+" "+basicConf.get(key).get(3);
             System.out.println(text);

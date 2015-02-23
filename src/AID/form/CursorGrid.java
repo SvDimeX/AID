@@ -12,7 +12,6 @@ import java.awt.*;
 public class CursorGrid extends JDialog {
     private static final Logger log = Logger.getLogger(MainForm.class);
     public CursorGrid() {
-//        super("Main Form");
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         setLayout(null);
         setSize(dim.width, dim.height);
@@ -21,15 +20,12 @@ public class CursorGrid extends JDialog {
         setUndecorated(true);
         setBackground(new Color(0, 0, 0, 0));
         setType(javax.swing.JFrame.Type.UTILITY);
-//        setShape(new Ellipse2D.Double(0,0,getWidth(),getHeight()));
         log.info("TRANSLUCENT supported:         " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.TRANSLUCENT));
         log.info("PERPIXEL_TRANSPARENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSPARENT));
         log.info("PERPIXEL_TRANSLUCENT supported: " + AWTUtilities.isTranslucencySupported(AWTUtilities.Translucency.PERPIXEL_TRANSLUCENT));
 
         String arg = "src/resources/png/cursor_grid.png";
-//        String arg = "src/resources/gif/Intro.gif";
         ImageIcon icon = new ImageIcon(arg);
-//        setIconImage(icon.getImage());
         JPanel panel = new JPanel();
         panel.setBackground(new Color(0, 0, 0, 0));
         JLabel label = new JLabel(icon);
@@ -40,7 +36,5 @@ public class CursorGrid extends JDialog {
         setUndecorated(true);
         pack();
         setVisible(true);
-
-
     }
 }

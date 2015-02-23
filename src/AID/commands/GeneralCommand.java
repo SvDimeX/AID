@@ -4,9 +4,6 @@ import AID.form.CommandTreeForm;
 import AID.io.IOCommand;
 import AID.voice.Synthesizer;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-
 
 /**
  * Created by dima-sv on 2/7/15.
@@ -14,7 +11,7 @@ import java.awt.event.KeyEvent;
 public class GeneralCommand {
     static IOCommand run = new IOCommand();
     static boolean preclose = false, preShotDown = false;
-
+    static CommandTreeForm commandTreeForm;
     public static void generalCommand(String recString) {
 
         if (recString.contains("close aid system")) {
@@ -29,7 +26,10 @@ public class GeneralCommand {
         }
 
         if (recString.contains("show command tree")) {
-            new CommandTreeForm();
+            commandTreeForm = new CommandTreeForm();
+        }
+        if (recString.contains("Close command tree")) {
+           commandTreeForm.dispose();
         }
 
         if (recString.contains("open music folder")) {
