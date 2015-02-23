@@ -1,17 +1,15 @@
 package AID.io.database;
 
 import AID.io.IOOperation;
-import AID.voice.Synthesizer;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by dima-sv on 2/16/15.
  */
-public class Seed {
+public class SeedLinux {
     static HashMap<String, List<String>> sysConf = new HashMap<String, List<String>>();
     static HashMap<String, List<String>> basicConf = new HashMap<String, List<String>>();
     static HashMap<String, List<String>> userConf = new HashMap<String, List<String>>();
@@ -45,11 +43,11 @@ public class Seed {
 
     private static void fillinBasicConf() {
         basicConf.put("000", Arrays.asList(new String[]{"Type",     "Request",              "Response",                 "Command"}));
-        basicConf.put("001", Arrays.asList(new String[]{"","AID come back",        "I am online and ready!",   ""}));
-        basicConf.put("002", Arrays.asList(new String[]{"","AID off transmitter",  "All advanced regognition functions stoped!",    ""}));
-        basicConf.put("003", Arrays.asList(new String[]{"","Close aid system",     "You are sure?",      ""}));
-        basicConf.put("004", Arrays.asList(new String[]{"","Yes",                  "",      ""}));
-        basicConf.put("005", Arrays.asList(new String[]{"","No",                   "",      ""}));
+        basicConf.put("001", Arrays.asList(new String[]{"main","AID come back",        "I am online and ready!",   ""}));
+        basicConf.put("002", Arrays.asList(new String[]{"main","AID off transmitter",  "All advanced regognition functions stoped!",    ""}));
+        basicConf.put("003", Arrays.asList(new String[]{"main","Close aid system",     "You are sure?",      ""}));
+        basicConf.put("004", Arrays.asList(new String[]{"main","Yes",                  "",      ""}));
+        basicConf.put("005", Arrays.asList(new String[]{"main","No",                   "",      ""}));
 
         basicConf.put("006", Arrays.asList(new String[]{"control",  "open music control",   "", ""}));
         basicConf.put("007", Arrays.asList(new String[]{"control",  "close music control",   "", ""}));
@@ -70,13 +68,13 @@ public class Seed {
         basicConf.put("021", Arrays.asList(new String[]{"music",    "music back",     "",     sysConf.get("defaultMusicPlayer").get(0).toString()+" --previous"}));
         basicConf.put("022", Arrays.asList(new String[]{"music",    "close banshee",  "",     "killall "+sysConf.get("defaultMusicPlayer").get(0).toString()}));
 
-        basicConf.put("023", Arrays.asList(new String[]{"music",    "volume zero",    "",     "amixer set Master 0"}));
-        basicConf.put("024", Arrays.asList(new String[]{"music",    "half volume",    "",     "amixer set Master 50"}));
-        basicConf.put("025", Arrays.asList(new String[]{"music",    "volume max",     "",     "amixer set Master 100"}));
-        basicConf.put("026", Arrays.asList(new String[]{"music",    "volume mute",    "",     "amixer set Master mute"}));
-        basicConf.put("027", Arrays.asList(new String[]{"music",    "volume mute off",  "",     "amixer set Master unmute"}));
-        basicConf.put("028", Arrays.asList(new String[]{"music",    "volume up",      "",     "amixer set Master 20+"}));
-        basicConf.put("029", Arrays.asList(new String[]{"music",    "volume down",    "",     "amixer set Master 20-"}));
+        basicConf.put("023", Arrays.asList(new String[]{"volume",    "volume zero",    "",     "amixer set Master 0"}));
+        basicConf.put("024", Arrays.asList(new String[]{"volume",    "half volume",    "",     "amixer set Master 50"}));
+        basicConf.put("025", Arrays.asList(new String[]{"volume",    "volume max",     "",     "amixer set Master 100"}));
+        basicConf.put("026", Arrays.asList(new String[]{"volume",    "volume mute",    "",     "amixer set Master mute"}));
+        basicConf.put("027", Arrays.asList(new String[]{"volume",    "volume mute off",  "",     "amixer set Master unmute"}));
+        basicConf.put("028", Arrays.asList(new String[]{"volume",    "volume up",      "",     "amixer set Master 20+"}));
+        basicConf.put("029", Arrays.asList(new String[]{"volume",    "volume down",    "",     "amixer set Master 20-"}));
 
         basicConf.put("030", Arrays.asList(new String[]{"video",    "totem show",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()}));
         basicConf.put("031", Arrays.asList(new String[]{"video",    "play video",    "",    sysConf.get("defaultVideoPlayer").get(0).toString()+" --play"}));

@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Created by dima-sv on 2/3/15.
  */
-public class AddPisitionsToConfig {
+public class AddPositionToConfig {
     public static Map<String, List<String>> addPosition() throws IOException {
         Boolean doit = true;
         String line;
