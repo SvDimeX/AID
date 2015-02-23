@@ -1,28 +1,25 @@
 package AID.voice;
 
 import AID.core.LogicCore;
-import AID.form.SystemPropForm;
 import edu.cmu.sphinx.frontend.util.Microphone;
 import edu.cmu.sphinx.recognizer.Recognizer;
 import edu.cmu.sphinx.result.Result;
 import edu.cmu.sphinx.util.props.ConfigurationManager;
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
 import java.net.URL;
 
 /**
  * Created by dima-sv on 2/3/15.
  */
 public class StartRecognize {
-    /**
-     * Програма для розпізнавання мовлення, теоретично розпізнає заздалегідь приготовлені команди */
+    /** Програма для розпізнавання мовлення, теоретично розпізнає заздалегідь приготовлені команди */
 
     private static final Logger logger = Logger.getLogger(StartRecognize.class);
     public StartRecognize() throws Exception {
         ConfigurationManager cm;
         LogicCore logicCore = new LogicCore();
-        Synthesizer.speak("I am omline and ready!:");
+        Synthesizer.speak("I am online and ready!:");
         URL url;
         url = StartRecognize.class.getResource("mainAID.config.xml");
         cm = new ConfigurationManager(url);
@@ -33,20 +30,17 @@ public class StartRecognize {
 
         if (microphone.startRecording()) {
             while (true) {
-                    /* This method will return when the end of speech
-                     * is reached. Note that the endpointer will determine
-                     * the end of speech. */
+                 /** This method will return when the end of speech is reached. Note that the endpointer will determine
+                 * the end of speech. */
                 Result result = recognizer.recognize();
                 if (result != null) {
                     String resultText = result.getBestFinalResultNoFiller();
-//                    System.out.println("You said: " + resultText);
+                    System.out.println("You said: " + resultText);
                     logger.info("Input text: " + resultText);
-                    System.out.println("Input text: " + resultText);
-                    logicCore.whatDoing(resultText);
+                    logicCore.logicCore(resultText);
 
                 } else if (result == null) {
-//                    System.out.println("I can't hear what you said.\n");
-                    logger.info("Result string is Null");
+                    logger.warn("I can't hear what you said. Result string is Null");
                 }
 
                 //swapGrammar("goodbye");
@@ -64,14 +58,12 @@ public class StartRecognize {
                 //swapGrammar("hello");
             }
         } else {
-//            System.out.println("Cannot start microphone.");
-            logger.error("Cannot start microphone.");
+            logger.error("Can't Start Microphone.");
             recognizer.deallocate();
             System.exit(1);
         }
         if (!microphone.startRecording()) {
-            logger.error("Cannot start microphone.");
-//            System.out.println("Can't Start Microphone");
+            logger.error("Can't Start Microphone.");
             recognizer.deallocate();
             System.exit(0);
         }
