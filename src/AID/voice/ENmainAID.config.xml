@@ -96,7 +96,7 @@
         <property name="dictionary" value="dictionary"/>
         <property name="grammarLocation"
                   value="src/resources/"/>
-        <property name="grammarName" value="mainAID"/>
+        <property name="grammarName" value="mainAID_EN"/>
         <property name="logMath" value="logMath"/>
     </component>
     <!--value="resource:/edu/cmu/sphinx/demo/helloworld/"/> -->

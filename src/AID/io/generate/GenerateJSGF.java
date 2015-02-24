@@ -1,4 +1,4 @@
-package AID.io.database;
+package AID.io.generate;
 
 import org.apache.log4j.Logger;
 
@@ -33,7 +33,7 @@ public class GenerateJSGF {
             mapListBuf.put(key, map.get(key).get(0).toString());
         }
         try {
-            File file = new File("src/resources/mainAID.gram");
+            File file = new File("src/resources/mainAID_UA.gram");
             if (!file.exists()) {
                 try {
                     file.createNewFile();

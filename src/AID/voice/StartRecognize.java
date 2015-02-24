@@ -29,7 +29,7 @@ public class StartRecognize {
         Synthesizer.speak("I am online and ready!:");
         URL url=null;
         if (sysProp.get("inputLang").get(0).toLowerCase().contains("eng")) {
-            url = StartRecognize.class.getResource("mainAID.config.xml");
+            url = StartRecognize.class.getResource("ENmainAID.config.xml");
         } else if (sysProp.get("inputLang").get(0).toLowerCase().contains("ukr")){
             url = StartRecognize.class.getResource("UAmainAID.config.xml");
         } else {

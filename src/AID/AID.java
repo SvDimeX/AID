@@ -1,15 +1,9 @@
 package AID;
 
 import AID.form.MainForm;
-import AID.io.IOOperation;
-import AID.io.database.DictGenerator;
-import AID.io.database.GenerateJSGF;
 import AID.voice.StartRecognize;
 import AID.voice.Synthesizer;
 import org.apache.log4j.Logger;
-
-import java.util.HashMap;
-import java.util.List;
 
 public class AID {
     private static final Logger logger = Logger.getLogger(AID.class);

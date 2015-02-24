@@ -1,4 +1,4 @@
-package AID.io.database;
+package AID.io.generate;
 
 import org.apache.log4j.Logger;
 
@@ -10,8 +10,8 @@ import java.util.Scanner;
 /**
  * Created by dima-sv on 24.02.15.
  */
-public class DictGenerator {
-    private static final Logger logger = Logger.getLogger(DictGenerator.class);
+public class GenerateDictionary {
+    private static final Logger logger = Logger.getLogger(GenerateDictionary.class);
 
     public static void generateUADict(String inputFile, String outputFile) {
         inputFile="../out/UAmainAID.buf";

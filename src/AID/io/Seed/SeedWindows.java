@@ -1,4 +1,4 @@
-package AID.io.database;
+package AID.io.Seed;
 
 import AID.io.IOOperation;
 
