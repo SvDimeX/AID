@@ -1,12 +1,12 @@
 #JSGF V1.0;
 grammar mainAID;
 /* automatic generating by AID-Systems */
-public <volume> = Volume mute off | Volume max | Volume mute | Half volume | Volume zero | Volume up | Volume down | END of definition line;
-public <keyboard> = Page down | Next tab | Page up | Reload page | END of definition line;
-public <mouse> = Left click | Right click | Middle click | Set position | Set one | Set two | Set three | Set four | Set five | Set six | Set seven | Set eight | Set nine | END of definition line;
-public <oher> = Show command tree | Open browser | Open face book page | Close browser | Open music folder | Open video folder | Open home folder | Call to mother | END of definition line;
-public <music> = Stop music | Next music | Play music | Close music player | Show music player | Pause music | Music back | END of definition line;
-public <control> = Disable video control | Enable internet control | Disable internet control | Enable video control | Enable telephone control | Enable music control | Enable mouse control | Disable telephone control | Disable music control | Disable mouse control | END of definition line;
-public <main> = AID off transmitter | No | AID come back | Yes | Close aid system | END of definition line;
-public <video> = Show video player | Play video | Video stop | pause Video | Next video | Previous video | Forward video | Back video | Totem volume up | Totem volume down | Close totem | END of definition line;
-/* You have 65 available command.*/
+public <volume> = Включити звук | Максимальна гучність | Виключити звук | Половину гучності | Мінімальна гучність | Голосніше | Тихіше | END of definition line;
+public <keyboard> = Наступна сторінка | Наступна вкладка | Попередня сторінка | Перезавантажити сторінку | END of definition line;
+public <mouse> = Лікий клік | Правий клік | Середній клік | Встановити позицію | Сектор один | Сектор два | Сектор три | Сектор чотири | Сектор п’ять | Сектор шість | Сектор сім | Сектор вісім | Сектор дев’ять | END of definition line;
+public <oher> = Закрити дерево команд | Показати дерево команд | Відкрити браузер | Відкрити фейсбук | Закрити браузер | Відкрити папку з музикою | Відкрити папку з відео | Відкрити домашню папку | Зателефонувати до мами | END of definition line;
+public <music> = Музика стоп | Наступна пісня | Грати музику | Закрити музичний плеєр | Запустити плеєр | Музика пауза | Попередня пісня | END of definition line;
+public <control> = Закрити контроль над відео | Встановити контроль над інтернетом | Закрити контроль над інтернетом | Встановити контроль над відео | Встановити контроль над скайпом | Встановити контроль над музикою | Встановити контроль над мишкою | Закрити контроль над скайпом | Закрити контроль над музикою | Закрити контроль над мишкою | END of definition line;
+public <main> = АІД виключи передавач | Ні | АІД повернися | Так | Закрити систему АІД | END of definition line;
+public <video> = Запустити відео плеєр | Запустити відео | Відео стоп | Відео пауза | Наступне відео | Попереднє відео | Перемотати вперед | Перемотати назад | Відео плеєр голосніше | Відео плеєр тихіше | Заерити відео плеєр | END of definition line;
+/* You have 66 available command.*/

@@ -14,8 +14,8 @@ public class DictGenerator {
     private static final Logger logger = Logger.getLogger(DictGenerator.class);
 
     public static void generateUADict(String inputFile, String outputFile) {
-        inputFile="src/resources/UAmainAID.buf";
-        outputFile="src/resources/TestDictUA.txt";
+        inputFile="../out/UAmainAID.buf";
+        outputFile="src/resources/dict/cmudict_UA.0.6d";
         String transcription = null, slowo = null;
         Scanner scannerFile = null;
         try {
@@ -149,7 +149,7 @@ public class DictGenerator {
             mapListBuf.put(key, map.get(key).get(0).toString());
         }
         try {
-            File file = new File("src/resources/UAmainAID.buf");
+            File file = new File("../out/UAmainAID.buf");
             if (!file.exists()) {
                 try {
                     file.createNewFile();

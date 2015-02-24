@@ -1,9 +1,15 @@
 package AID;
 
 import AID.form.MainForm;
+import AID.io.IOOperation;
+import AID.io.database.DictGenerator;
+import AID.io.database.GenerateJSGF;
 import AID.voice.StartRecognize;
 import AID.voice.Synthesizer;
 import org.apache.log4j.Logger;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class AID {
     private static final Logger logger = Logger.getLogger(AID.class);
@@ -18,12 +24,12 @@ public class AID {
 //        HashMap<String, List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
 //        DictGenerator g = new DictGenerator();
 //        g.prepareForGenerate(basicConfig);
-//        g.generateDict("", "");
+//        g.generateUADict("", "");
 
 
 //        HashMap<String, List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
 //        GenerateJSGF g = new GenerateJSGF();
-//        g.generate(basicConfig);
+//        g.generateJSGF(basicConfig);
 
 
 //        HashMap<String, List<String>> sysProp=IOOperation.loadProperties("src/resources/configuration/System.properties");

@@ -1,6 +1,6 @@
 package AID.form;
 
-import AID.io.GenerateJSGF;
+import AID.io.database.GenerateJSGF;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;

@@ -28,9 +28,9 @@ public class SeedLinux {
         sysConf.put("Atribute", Arrays.asList(new String[]{"Equals"}));
         sysConf.put("firstRun", Arrays.asList(new String[]{"false"}));
         sysConf.put("systType", Arrays.asList(new String[]{"linux"}));
-        sysConf.put("systLang", Arrays.asList(new String[]{"Eng"}));
-        sysConf.put("inputLang", Arrays.asList(new String[]{"Eng"}));
-        sysConf.put("outputLang", Arrays.asList(new String[]{"Eng"}));
+        sysConf.put("systLang", Arrays.asList(new String[]{"Ukr"}));
+        sysConf.put("inputLang", Arrays.asList(new String[]{"Ukr"}));
+        sysConf.put("outputLang", Arrays.asList(new String[]{"Ukr"}));
         sysConf.put("systVoice", Arrays.asList(new String[]{"kevin16"}));
         sysConf.put("defaultMusicPlayer", Arrays.asList(new String[]{"amarok"}));
         sysConf.put("defaultVideoPlayer", Arrays.asList(new String[]{"totem"}));
@@ -42,78 +42,78 @@ public class SeedLinux {
     }
 
     private static void fillinBasicConf() {
-        basicConf.put("AID_online", Arrays.asList(new String[]{"main", "AID come back", "I am online and ready!", ""}));
-        basicConf.put("AID_offline", Arrays.asList(new String[]{"main", "AID off transmitter", "All advanced regognition functions stoped!", ""}));
-        basicConf.put("AID_close", Arrays.asList(new String[]{"main", "Close aid system", "You are sure?", ""}));
-        basicConf.put("yes", Arrays.asList(new String[]{"main", "Yes", "", ""}));
-        basicConf.put("no", Arrays.asList(new String[]{"main", "No", "", ""}));
+        basicConf.put("AID_online", Arrays.asList(new String[]{"main", "АІД повернися", "I am online and ready!", ""}));
+        basicConf.put("AID_offline", Arrays.asList(new String[]{"main", "АІД виключи передавач", "All advanced regognition functions stoped!", ""}));
+        basicConf.put("AID_close", Arrays.asList(new String[]{"main", "Закрити систему АІД", "You are sure?", ""}));
+        basicConf.put("yes", Arrays.asList(new String[]{"main", "Так", "", ""}));
+        basicConf.put("no", Arrays.asList(new String[]{"main", "Ні", "", ""}));
 
-        basicConf.put("enable_music", Arrays.asList(new String[]{"control", "Enable music control", "", ""}));
-        basicConf.put("disable_music", Arrays.asList(new String[]{"control", "Disable music control", "", ""}));
-        basicConf.put("enable_mouse", Arrays.asList(new String[]{"control", "Enable mouse control", "", ""}));
-        basicConf.put("disable_mouse", Arrays.asList(new String[]{"control", "Disable mouse control", "", ""}));
-        basicConf.put("enable_video", Arrays.asList(new String[]{"control", "Enable video control", "", ""}));
-        basicConf.put("disable_video", Arrays.asList(new String[]{"control", "Disable video control", "", ""}));
-        basicConf.put("enable_internet", Arrays.asList(new String[]{"control", "Enable internet control", "", ""}));
-        basicConf.put("disable_internet", Arrays.asList(new String[]{"control", "Disable internet control", "", ""}));
-        basicConf.put("enable_skype", Arrays.asList(new String[]{"control", "Enable telephone control", "", ""}));
-        basicConf.put("disable_skype", Arrays.asList(new String[]{"control", "Disable telephone control", "", ""}));
+        basicConf.put("enable_music", Arrays.asList(new String[]{"control", "Встановити контроль над музикою", "", ""}));
+        basicConf.put("disable_music", Arrays.asList(new String[]{"control", "Закрити контроль над музикою", "", ""}));
+        basicConf.put("enable_mouse", Arrays.asList(new String[]{"control", "Встановити контроль над мишкою", "", ""}));
+        basicConf.put("disable_mouse", Arrays.asList(new String[]{"control", "Закрити контроль над мишкою", "", ""}));
+        basicConf.put("enable_video", Arrays.asList(new String[]{"control", "Встановити контроль над відео", "", ""}));
+        basicConf.put("disable_video", Arrays.asList(new String[]{"control", "Закрити контроль над відео", "", ""}));
+        basicConf.put("enable_internet", Arrays.asList(new String[]{"control", "Встановити контроль над інтернетом", "", ""}));
+        basicConf.put("disable_internet", Arrays.asList(new String[]{"control", "Закрити контроль над інтернетом", "", ""}));
+        basicConf.put("enable_skype", Arrays.asList(new String[]{"control", "Встановити контроль над скайпом", "", ""}));
+        basicConf.put("disable_skype", Arrays.asList(new String[]{"control", "Закрити контроль над скайпом", "", ""}));
 
-        basicConf.put("show_music_player", Arrays.asList(new String[]{"music", "Show music player", "", sysConf.get("defaultMusicPlayer").get(0).toString()}));
-        basicConf.put("play_music", Arrays.asList(new String[]{"music", "Play music", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --play"}));
-        basicConf.put("stop_music", Arrays.asList(new String[]{"music", "Stop music", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --pause"}));
-        basicConf.put("pause_music", Arrays.asList(new String[]{"music", "Pause music", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --pause"}));
-        basicConf.put("next_music", Arrays.asList(new String[]{"music", "Next music", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --next"}));
-        basicConf.put("prev_music", Arrays.asList(new String[]{"music", "Music back", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --previous"}));
-        basicConf.put("close_player", Arrays.asList(new String[]{"music", "Close music player", "", "killall " + sysConf.get("defaultMusicPlayer").get(0).toString()}));
+        basicConf.put("show_music_player", Arrays.asList(new String[]{"music", "Запустити плеєр", "", sysConf.get("defaultMusicPlayer").get(0).toString()}));
+        basicConf.put("play_music", Arrays.asList(new String[]{"music", "Грати музику", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --play"}));
+        basicConf.put("stop_music", Arrays.asList(new String[]{"music", "Музика стоп", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --pause"}));
+        basicConf.put("pause_music", Arrays.asList(new String[]{"music", "Музика пауза", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --pause"}));
+        basicConf.put("next_music", Arrays.asList(new String[]{"music", "Наступна пісня", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --next"}));
+        basicConf.put("prev_music", Arrays.asList(new String[]{"music", "Попередня пісня", "", sysConf.get("defaultMusicPlayer").get(0).toString() + " --previous"}));
+        basicConf.put("close_player", Arrays.asList(new String[]{"music", "Закрити музичний плеєр", "", "killall " + sysConf.get("defaultMusicPlayer").get(0).toString()}));
 
-        basicConf.put("volume0", Arrays.asList(new String[]{"volume", "Volume zero", "", "amixer set Master 0"}));
-        basicConf.put("volume50%", Arrays.asList(new String[]{"volume", "Half volume", "", "amixer set Master 50"}));
-        basicConf.put("volume100%", Arrays.asList(new String[]{"volume", "Volume max", "", "amixer set Master 100"}));
-        basicConf.put("volume_off", Arrays.asList(new String[]{"volume", "Volume mute", "", "amixer set Master mute"}));
-        basicConf.put("volume_on", Arrays.asList(new String[]{"volume", "Volume mute off", "", "amixer set Master unmute"}));
-        basicConf.put("volume+20", Arrays.asList(new String[]{"volume", "Volume up", "", "amixer set Master 20+"}));
-        basicConf.put("volume-20", Arrays.asList(new String[]{"volume", "Volume down", "", "amixer set Master 20-"}));
+        basicConf.put("volume0", Arrays.asList(new String[]{"volume", "Мінімальна гучність", "", "amixer set Master 0"}));
+        basicConf.put("volume50%", Arrays.asList(new String[]{"volume", "Половину гучності", "", "amixer set Master 50"}));
+        basicConf.put("volume100%", Arrays.asList(new String[]{"volume", "Максимальна гучність", "", "amixer set Master 100"}));
+        basicConf.put("volume_off", Arrays.asList(new String[]{"volume", "Виключити звук", "", "amixer set Master mute"}));
+        basicConf.put("volume_on", Arrays.asList(new String[]{"volume", "Включити звук", "", "amixer set Master unmute"}));
+        basicConf.put("volume+20", Arrays.asList(new String[]{"volume", "Голосніше", "", "amixer set Master 20+"}));
+        basicConf.put("volume-20", Arrays.asList(new String[]{"volume", "Тихіше", "", "amixer set Master 20-"}));
 
-        basicConf.put("030", Arrays.asList(new String[]{"video", "Show video player", "", sysConf.get("defaultVideoPlayer").get(0).toString()}));
-        basicConf.put("031", Arrays.asList(new String[]{"video", "Play video", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --play"}));
-        basicConf.put("032", Arrays.asList(new String[]{"video", "Video stop", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --pause"}));
-        basicConf.put("033", Arrays.asList(new String[]{"video", "pause Video", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --pause"}));
-        basicConf.put("034", Arrays.asList(new String[]{"video", "Next video", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --next"}));
-        basicConf.put("035", Arrays.asList(new String[]{"video", "Previous video", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --previous"}));
-        basicConf.put("036", Arrays.asList(new String[]{"video", "Forward video", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --seek-fwd"}));
-        basicConf.put("037", Arrays.asList(new String[]{"video", "Back video", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --seek-bwd"}));
-        basicConf.put("038", Arrays.asList(new String[]{"video", "Totem volume up", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --volume-up"}));
-        basicConf.put("039", Arrays.asList(new String[]{"video", "Totem volume down", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --volume-down"}));
-        basicConf.put("040", Arrays.asList(new String[]{"video", "Close totem", "", "killall " + sysConf.get("defaultVideoPlayer").get(0).toString()}));
+        basicConf.put("030", Arrays.asList(new String[]{"video", "Запустити відео плеєр", "", sysConf.get("defaultVideoPlayer").get(0).toString()}));
+        basicConf.put("031", Arrays.asList(new String[]{"video", "Запустити відео", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --play"}));
+        basicConf.put("032", Arrays.asList(new String[]{"video", "Відео стоп", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --pause"}));
+        basicConf.put("033", Arrays.asList(new String[]{"video", "Відео пауза", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --pause"}));
+        basicConf.put("034", Arrays.asList(new String[]{"video", "Наступне відео", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --next"}));
+        basicConf.put("035", Arrays.asList(new String[]{"video", "Попереднє відео", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --previous"}));
+        basicConf.put("036", Arrays.asList(new String[]{"video", "Перемотати вперед", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --seek-fwd"}));
+        basicConf.put("037", Arrays.asList(new String[]{"video", "Перемотати назад", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --seek-bwd"}));
+        basicConf.put("038", Arrays.asList(new String[]{"video", "Відео плеєр голосніше", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --volume-up"}));
+        basicConf.put("039", Arrays.asList(new String[]{"video", "Відео плеєр тихіше", "", sysConf.get("defaultVideoPlayer").get(0).toString() + " --volume-down"}));
+        basicConf.put("040", Arrays.asList(new String[]{"video", "Заерити відео плеєр", "", "killall " + sysConf.get("defaultVideoPlayer").get(0).toString()}));
 
-        basicConf.put("041", Arrays.asList(new String[]{"mouse", "Left click", "", ""}));
-        basicConf.put("042", Arrays.asList(new String[]{"mouse", "Right click", "", ""}));
-        basicConf.put("043", Arrays.asList(new String[]{"mouse", "Middle click", "", ""}));
-        basicConf.put("044", Arrays.asList(new String[]{"mouse", "Set position", "", ""}));
-        basicConf.put("045", Arrays.asList(new String[]{"mouse", "Set one", "", ""}));
-        basicConf.put("046", Arrays.asList(new String[]{"mouse", "Set two", "", ""}));
-        basicConf.put("047", Arrays.asList(new String[]{"mouse", "Set three", "", ""}));
-        basicConf.put("048", Arrays.asList(new String[]{"mouse", "Set four", "", ""}));
-        basicConf.put("049", Arrays.asList(new String[]{"mouse", "Set five", "", ""}));
-        basicConf.put("050", Arrays.asList(new String[]{"mouse", "Set six", "", ""}));
-        basicConf.put("051", Arrays.asList(new String[]{"mouse", "Set seven", "", ""}));
-        basicConf.put("052", Arrays.asList(new String[]{"mouse", "Set eight", "", ""}));
-        basicConf.put("053", Arrays.asList(new String[]{"mouse", "Set nine", "", ""}));
+        basicConf.put("041", Arrays.asList(new String[]{"mouse", "Лікий клік", "", ""}));
+        basicConf.put("042", Arrays.asList(new String[]{"mouse", "Правий клік", "", ""}));
+        basicConf.put("043", Arrays.asList(new String[]{"mouse", "Середній клік", "", ""}));
+        basicConf.put("044", Arrays.asList(new String[]{"mouse", "Встановити позицію", "", ""}));
+        basicConf.put("045", Arrays.asList(new String[]{"mouse", "Сектор один", "", ""}));
+        basicConf.put("046", Arrays.asList(new String[]{"mouse", "Сектор два", "", ""}));
+        basicConf.put("047", Arrays.asList(new String[]{"mouse", "Сектор три", "", ""}));
+        basicConf.put("048", Arrays.asList(new String[]{"mouse", "Сектор чотири", "", ""}));
+        basicConf.put("049", Arrays.asList(new String[]{"mouse", "Сектор п’ять", "", ""}));
+        basicConf.put("050", Arrays.asList(new String[]{"mouse", "Сектор шість", "", ""}));
+        basicConf.put("051", Arrays.asList(new String[]{"mouse", "Сектор сім", "", ""}));
+        basicConf.put("052", Arrays.asList(new String[]{"mouse", "Сектор вісім", "", ""}));
+        basicConf.put("053", Arrays.asList(new String[]{"mouse", "Сектор дев’ять", "", ""}));
 
-        basicConf.put("054", Arrays.asList(new String[]{"oher", "Open browser", "", "x-www-browser"}));
-        basicConf.put("055", Arrays.asList(new String[]{"oher", "Open face book page", "", "xdg-open http://facebook.com"}));
-        basicConf.put("056", Arrays.asList(new String[]{"oher", "Close browser", "", "killall " + sysConf.get("defaultBrowser").get(0).toString()}));
-        basicConf.put("057", Arrays.asList(new String[]{"oher", "Open music folder", "", "xdg-open ~/Music"}));
-        basicConf.put("058", Arrays.asList(new String[]{"oher", "Open video folder", "", "xdg-open ~/Videos"}));
-        basicConf.put("059", Arrays.asList(new String[]{"oher", "Open home folder", "", "xdg-open ~/"}));
+        basicConf.put("054", Arrays.asList(new String[]{"oher", "Відкрити браузер", "", "x-www-browser"}));
+        basicConf.put("055", Arrays.asList(new String[]{"oher", "Відкрити фейсбук", "", "xdg-open http://facebook.com"}));
+        basicConf.put("056", Arrays.asList(new String[]{"oher", "Закрити браузер", "", "killall " + sysConf.get("defaultBrowser").get(0).toString()}));
+        basicConf.put("057", Arrays.asList(new String[]{"oher", "Відкрити папку з музикою", "", "xdg-open ~/Music"}));
+        basicConf.put("058", Arrays.asList(new String[]{"oher", "Відкрити папку з відео", "", "xdg-open ~/Videos"}));
+        basicConf.put("059", Arrays.asList(new String[]{"oher", "Відкрити домашню папку", "", "xdg-open ~/"}));
 
-        basicConf.put("060", Arrays.asList(new String[]{"oher", "Call to mother", "", "skype --callto gazduny"}));
+        basicConf.put("060", Arrays.asList(new String[]{"oher", "Зателефонувати до мами", "", "skype --callto gazduny"}));
 
-        basicConf.put("page_up", Arrays.asList(new String[]{"keyboard", "Page up", "", ""}));
-        basicConf.put("pahe_down", Arrays.asList(new String[]{"keyboard", "Page down", "", ""}));
-        basicConf.put("next_tab", Arrays.asList(new String[]{"keyboard", "Next tab", "", ""}));
-        basicConf.put("relad_page", Arrays.asList(new String[]{"keyboard", "Reload page", "", ""}));
+        basicConf.put("page_up", Arrays.asList(new String[]{"keyboard", "Попередня сторінка", "", ""}));
+        basicConf.put("pahe_down", Arrays.asList(new String[]{"keyboard", "Наступна сторінка", "", ""}));
+        basicConf.put("next_tab", Arrays.asList(new String[]{"keyboard", "Наступна вкладка", "", ""}));
+        basicConf.put("relad_page", Arrays.asList(new String[]{"keyboard", "Перезавантажити сторінку", "", ""}));
 
 //        basicConf.put("0", Arrays.asList(new String[]{"keyboard",   "",    "",    ""}));
 //        basicConf.put("0", Arrays.asList(new String[]{"",    "",    ""}));
@@ -121,8 +121,8 @@ public class SeedLinux {
 //        basicConf.put("0", Arrays.asList(new String[]{"",    "",    ""}));
 //        basicConf.put("0", Arrays.asList(new String[]{"",    "",    ""}));
 
-        basicConf.put("show_tree", Arrays.asList(new String[]{"oher", "Show command tree", "", ""}));
-        basicConf.put("close_tree", Arrays.asList(new String[]{"oher", "Close command tree", "", ""}));
+        basicConf.put("show_tree", Arrays.asList(new String[]{"oher", "Показати дерево команд", "", ""}));
+        basicConf.put("close_tree", Arrays.asList(new String[]{"oher", "Закрити дерево команд", "", ""}));
         for (String key : basicConf.keySet()) {
             String text = key + ": " + basicConf.get(key).get(0) + " " + basicConf.get(key).get(1) + " " + basicConf.get(key).get(2) + " " + basicConf.get(key).get(3);
             System.out.println(text);

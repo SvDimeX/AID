@@ -30,8 +30,8 @@ public class StartRecognize {
         URL url=null;
         if (sysProp.get("inputLang").get(0).toLowerCase().contains("eng")) {
             url = StartRecognize.class.getResource("mainAID.config.xml");
-        } else if (sysProp.get("inputLang").get(0).toLowerCase().contains("ua")){
-            url = StartRecognize.class.getResource("mainAID.config.xml");
+        } else if (sysProp.get("inputLang").get(0).toLowerCase().contains("ukr")){
+            url = StartRecognize.class.getResource("UAmainAID.config.xml");
         } else {
             logger.error("Config xml file for "+sysProp.get("inputLang").get(0)+" language does not exist!!!");
         }
