@@ -12,12 +12,19 @@ public class AID {
         Synthesizer.speak(" AID system initializing...");
         logger.info("AID system Starting...");
         new MainForm();
-
         new StartRecognize();
 
-//        HashMap<String, List<String>> basicConfig=IOOperation.loadProperties("src/resources/configuration/Basic.config");
+
+//        HashMap<String, List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
+//        DictGenerator g = new DictGenerator();
+//        g.prepareForGenerate(basicConfig);
+//        g.generateDict("", "");
+
+
+//        HashMap<String, List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
 //        GenerateJSGF g = new GenerateJSGF();
 //        g.generate(basicConfig);
+
 
 //        HashMap<String, List<String>> sysProp=IOOperation.loadProperties("src/resources/configuration/System.properties");
 //        System.out.println(sysProp.get("systType").get(0).toString());
@@ -25,6 +32,7 @@ public class AID {
 //            String text=key+": "+sysProp.get(key).get(0);
 //            System.out.println(text);
 //        }
+
 
 //        HashMap<String, List<String>> basicConfig=IOOperation.loadProperties("src/resources/configuration/Basic.config");
 //        System.out.println(basicConfig.get("001").get(0) + "; " + basicConfig.get("001").get(1)+"; "+basicConfig.get("001").get(2)+".");

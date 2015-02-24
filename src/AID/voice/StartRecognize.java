@@ -1,6 +1,7 @@
 package AID.voice;
 
 import AID.core.LogicCore;
+import AID.io.IOOperation;
 import edu.cmu.sphinx.frontend.util.Microphone;
 import edu.cmu.sphinx.recognizer.Recognizer;
 import edu.cmu.sphinx.result.Result;
@@ -8,6 +9,8 @@ import edu.cmu.sphinx.util.props.ConfigurationManager;
 import org.apache.log4j.Logger;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by dima-sv on 2/3/15.
@@ -18,13 +21,20 @@ public class StartRecognize {
      */
 
     private static final Logger logger = Logger.getLogger(StartRecognize.class);
+    private HashMap<String, List<String>> sysProp=IOOperation.loadProperties("src/resources/configuration/System.properties");
 
     public StartRecognize() throws Exception {
         ConfigurationManager cm;
         LogicCore logicCore = new LogicCore();
         Synthesizer.speak("I am online and ready!:");
-        URL url;
-        url = StartRecognize.class.getResource("mainAID.config.xml");
+        URL url=null;
+        if (sysProp.get("inputLang").get(0).toLowerCase().contains("eng")) {
+            url = StartRecognize.class.getResource("mainAID.config.xml");
+        } else if (sysProp.get("inputLang").get(0).toLowerCase().contains("ua")){
+            url = StartRecognize.class.getResource("mainAID.config.xml");
+        } else {
+            logger.error("Config xml file for "+sysProp.get("inputLang").get(0)+" language does not exist!!!");
+        }
         cm = new ConfigurationManager(url);
 
         Recognizer recognizer = (Recognizer) cm.lookup("recognizer");
@@ -39,6 +49,7 @@ public class StartRecognize {
                 if (result != null) {
                     String resultText = result.getBestFinalResultNoFiller();
                     System.out.println("You said: " + resultText);
+                    logger.info("Get Best Pronunciation Result: " + result.getBestPronunciationResult());
                     logger.info("Input text: " + resultText);
                     logicCore.logicCore(resultText);
 

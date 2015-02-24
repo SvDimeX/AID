@@ -1,38 +1,12 @@
 #JSGF V1.0;
-
-/**
- * JSGF Grammar for Hello World example
- */
-
 grammar mainAID;
-
-/* public <greet> = (Good morning | Hello) ( Bhiksha | Evandro | Paul | Philip | Rita | Will ); */
-
-public <general_command> =  Enable music control | disable music control | Enable mouse control | Disable mouse control
-                            Enable telephone control | disable telephone control | shut down computer |
-                            Enable video control | disable video control | Enable internet control | disable internet control;
-
-public <menu_command> =     AID come back | AID off transmitter | close aid system | yes | no | show command tree;
-
-public <music_command> =    banshee show | banshee hide |  play music | stop music | pause music |
-                            next music | music back | close music player |
-                            volume zero | volume max | half volume | volume mute | volume mute off | volume up | volume down;
-
-public <video_command> =    totem show |  play video | video stop | pause video | next video |
-                            previous video | back video | forward video | volume up | volume down | close video player;
-
-public <mouse_command> =    left click | right click | middle click | set position | set one | set two | set three |
-                            set four | set five | set six | set seven | set eight | set nine;
-
-public <internet_command> = open browser | open face book page | close browser ;
-
-public <open_folder_command> = open music folder | open video folder;
-
-public <keyboard_command> = Next tab | Page down | Page up | Switch window | Show menu | Reload page;
-
-public <skype_command> =    call to mother;
-
-/*
-public <command> =  <general_command> | <menu_command> | <music_command> | <video_command> |
-                    <mouse_command> | <skype_command> ;
-                    */
+/* automatic generating by AID-Systems */
+public <volume> = Volume mute off | Volume max | Volume mute | Half volume | Volume zero | Volume up | Volume down | END of definition line;
+public <keyboard> = Page down | Next tab | Page up | Reload page | END of definition line;
+public <mouse> = Left click | Right click | Middle click | Set position | Set one | Set two | Set three | Set four | Set five | Set six | Set seven | Set eight | Set nine | END of definition line;
+public <oher> = Show command tree | Open browser | Open face book page | Close browser | Open music folder | Open video folder | Open home folder | Call to mother | END of definition line;
+public <music> = Stop music | Next music | Play music | Close music player | Show music player | Pause music | Music back | END of definition line;
+public <control> = Disable video control | Enable internet control | Disable internet control | Enable video control | Enable telephone control | Enable music control | Enable mouse control | Disable telephone control | Disable music control | Disable mouse control | END of definition line;
+public <main> = AID off transmitter | No | AID come back | Yes | Close aid system | END of definition line;
+public <video> = Show video player | Play video | Video stop | pause Video | Next video | Previous video | Forward video | Back video | Totem volume up | Totem volume down | Close totem | END of definition line;
+/* You have 65 available command.*/

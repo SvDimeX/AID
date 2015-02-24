@@ -18,7 +18,7 @@ public class GenerateJSGF {
     static String annotate = "automatic generating by AID-Systems";
     private static final Logger logger = Logger.getLogger(GenerateJSGF.class);
 
-    public static void generate(HashMap<String, List<String>> map) {
+    public static void generateJSGF(HashMap<String, List<String>> map) {
         HashMap mapListType = new HashMap();
         HashMap mapListBuf = new HashMap();
         HashMap mapListCommand = new HashMap();
