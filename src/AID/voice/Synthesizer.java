@@ -12,7 +12,7 @@ public class Synthesizer {
     private static VoiceManager voiceManager = VoiceManager.getInstance();
     private static Voice voice;
 
-    public static void speak(String textTS){
+    public static void speak(String textTS) {
         IOCommand run = new IOCommand();
 //        run.runCommand("amixer set Capture toggle");
 //        run.runCommand("amixer -c 1 sset Mic toggle"); //потрібно тільки для вбудованого мікрофону

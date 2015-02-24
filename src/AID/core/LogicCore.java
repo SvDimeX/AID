@@ -13,20 +13,21 @@ import java.util.List;
  */
 public class LogicCore {
     private static final Logger logger = Logger.getLogger(LogicCore.class);
-   static LinuxLogicCore linuxLogicCore = new LinuxLogicCore();
-    public static void logicCore(String inputText){
-        HashMap<String, List<String>> sysProp= null;
+    static LinuxLogicCore linuxLogicCore = new LinuxLogicCore();
+
+    public static void logicCore(String inputText) {
+        HashMap<String, List<String>> sysProp = null;
         try {
             sysProp = IOOperation.loadProperties("src/resources/configuration/System.properties");
         } catch (IOException e) {
             e.printStackTrace();
-            logger.error("Problem with file "+e);
+            logger.error("Problem with file " + e);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             logger.error(e);
         }
 
-        if (sysProp.get("systType").get(0).toString().toLowerCase().contains("linux")){
+        if (sysProp.get("systType").get(0).toString().toLowerCase().contains("linux")) {
             try {
                 linuxLogicCore.whatDoing(inputText);
             } catch (Exception e) {
@@ -34,7 +35,7 @@ public class LogicCore {
                 logger.error(e);
             }
 
-        } else if (sysProp.get("systType").get(0).toString().toLowerCase().contains("windows")){
+        } else if (sysProp.get("systType").get(0).toString().toLowerCase().contains("windows")) {
 
         }
 

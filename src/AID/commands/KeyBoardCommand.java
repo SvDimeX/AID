@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
  * Created by dima-sv on 2/22/15.
  */
 public class KeyBoardCommand {
-    public static void keyboardCommand(String recString){
+    public static void keyboardCommand(String recString) {
         if (recString.contains("next tab")) {
             try {
                 Robot robot = new Robot();
@@ -59,7 +59,7 @@ public class KeyBoardCommand {
                 e.printStackTrace();
             }
         }
-            
+
         if (recString.contains("reload page")) {
             try {
                 Robot robot = new Robot();

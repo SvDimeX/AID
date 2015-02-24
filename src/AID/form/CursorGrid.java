@@ -11,6 +11,7 @@ import java.awt.*;
  */
 public class CursorGrid extends JDialog {
     private static final Logger log = Logger.getLogger(MainForm.class);
+
     public CursorGrid() {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         setLayout(null);

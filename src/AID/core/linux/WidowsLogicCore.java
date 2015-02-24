@@ -11,7 +11,7 @@ import java.util.List;
  * Created by dima-sv on 23.02.15.
  */
 public class WidowsLogicCore {
-    static boolean listening=true;
+    static boolean listening = true;
     static GeneralCommand generalCommand = new GeneralCommand();
     static KeyBoardCommand keyBoardCommand = new KeyBoardCommand();
 

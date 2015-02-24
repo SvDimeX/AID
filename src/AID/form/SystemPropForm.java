@@ -10,6 +10,7 @@ import java.awt.*;
  */
 public class SystemPropForm extends JFrame {
     private static final Logger log = Logger.getLogger(SystemPropForm.class);
+
     public SystemPropForm() {
 //        super("Main Form");
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();

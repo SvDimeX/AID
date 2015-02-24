@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class IOOperation {
 
-    public enum Configuration{
+    public enum Configuration {
         BasicConf,
         DefaultConf,
         UserConf
@@ -21,7 +21,7 @@ public class IOOperation {
         File file = new File(fileName);
         FileInputStream fileStream = new FileInputStream(file);
         ObjectInputStream objInpStream = new ObjectInputStream(fileStream);
-        HashMap<String, String> fileObj = (HashMap<String,String>) objInpStream.readObject();
+        HashMap<String, String> fileObj = (HashMap<String, String>) objInpStream.readObject();
         objInpStream.close();
         return fileObj;
     }
@@ -78,7 +78,7 @@ public class IOOperation {
 //        return allConfig;
 //    }
 
-    public void viewMap(HashMap <String, List<String>> map){
+    public void viewMap(HashMap<String, List<String>> map) {
         for (String key : map.keySet()) {
             System.out.print(key);
             System.out.println(": " + map.get(key));

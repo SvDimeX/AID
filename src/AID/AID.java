@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 public class AID {
     private static final Logger logger = Logger.getLogger(AID.class);
+
     public static void main(String[] args) throws Exception {
         Synthesizer.speak(" AID system initializing...");
         logger.info("AID system Starting...");

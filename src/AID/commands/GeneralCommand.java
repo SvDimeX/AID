@@ -12,6 +12,7 @@ public class GeneralCommand {
     static IOCommand run = new IOCommand();
     static boolean preclose = false, preShotDown = false;
     static CommandTreeForm commandTreeForm;
+
     public static void generalCommand(String recString) {
 
         if (recString.contains("close aid system")) {
@@ -29,7 +30,7 @@ public class GeneralCommand {
             commandTreeForm = new CommandTreeForm();
         }
         if (recString.contains("Close command tree")) {
-           commandTreeForm.dispose();
+            commandTreeForm.dispose();
         }
 
         if (recString.contains("open music folder")) {

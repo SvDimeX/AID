@@ -16,9 +16,9 @@ public class MultimediaCommand {
 
     public static void multimediaCommand(String type, String recString) throws IOException, ClassNotFoundException {
 
-        HashMap<String, List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
+        HashMap<String, List<String>> basicConfig = IOOperation.loadProperties("src/resources/configuration/Basic.config");
         for (String key : basicConfig.keySet()) {
-            if (type.equalsIgnoreCase(basicConfig.get(key).get(0).toString())){
+            if (type.equalsIgnoreCase(basicConfig.get(key).get(0).toString())) {
                 if (recString.equalsIgnoreCase(basicConfig.get(key).get(1))) {
                     run.runCommand(basicConfig.get(key).get(3));
                 }
@@ -26,6 +26,7 @@ public class MultimediaCommand {
         }
 
     }
+
     public static void bansheeCommand(String recString) {
         if (recString.contains("banshee show")) {
             run.runCommand("amarok");
@@ -76,6 +77,7 @@ public class MultimediaCommand {
         }
 
     }
+
     public static void totemCommand(String recString) {
         if (recString.contains("totem show")) {
             run.runCommand("totem");
@@ -111,8 +113,9 @@ public class MultimediaCommand {
             run.runCommand("killall totem");
         }
     }
-    public static void skypeCommand(String recString){
-        if (recString.contains("call to mother")){
+
+    public static void skypeCommand(String recString) {
+        if (recString.contains("call to mother")) {
             run.runCommand("skype --callto gazduny");
         }
     }

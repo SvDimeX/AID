@@ -13,9 +13,12 @@ import java.net.URL;
  * Created by dima-sv on 2/3/15.
  */
 public class StartRecognize {
-    /** Програма для розпізнавання мовлення, теоретично розпізнає заздалегідь приготовлені команди */
+    /**
+     * Програма для розпізнавання мовлення, теоретично розпізнає заздалегідь приготовлені команди
+     */
 
     private static final Logger logger = Logger.getLogger(StartRecognize.class);
+
     public StartRecognize() throws Exception {
         ConfigurationManager cm;
         LogicCore logicCore = new LogicCore();
@@ -30,7 +33,7 @@ public class StartRecognize {
 
         if (microphone.startRecording()) {
             while (true) {
-                 /** This method will return when the end of speech is reached. Note that the endpointer will determine
+                /** This method will return when the end of speech is reached. Note that the endpointer will determine
                  * the end of speech. */
                 Result result = recognizer.recognize();
                 if (result != null) {

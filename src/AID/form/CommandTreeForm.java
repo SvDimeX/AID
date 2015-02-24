@@ -13,53 +13,55 @@ import java.util.*;
 
 public class CommandTreeForm extends JDialog {
     private static final Logger logger = Logger.getLogger(CommandTreeForm.class);
+
     public CommandTreeForm() {
-        JDialog treeForm= new fillTree();
+        JDialog treeForm = new fillTree();
 //        OnlyTextTreeExample frame =new OnlyTextTreeExample();
         treeForm.setSize(600, 800);
         treeForm.setLocation(300, 200);
         treeForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         treeForm.setVisible(true);
     }
- }
+}
 
-class fillTree extends JDialog{
+class fillTree extends JDialog {
     private static final Logger logger = Logger.getLogger(fillTree.class);
-    protected fillTree(){
+
+    protected fillTree() {
         try {
-            HashMap<String, java.util.List<String>> basicConfig= IOOperation.loadProperties("src/resources/configuration/Basic.config");
+            HashMap<String, java.util.List<String>> basicConfig = IOOperation.loadProperties("src/resources/configuration/Basic.config");
             HashMap mapListType = new HashMap();
             HashMap mapListBuf = new HashMap();
             HashMap mapListCommand = new HashMap();
             for (String key : basicConfig.keySet()) {
-                mapListType.put(basicConfig.get(key).get(0).toString(),basicConfig.get(key).get(0).toString());
+                mapListType.put(basicConfig.get(key).get(0).toString(), basicConfig.get(key).get(0).toString());
             }
             for (String key : basicConfig.keySet()) {
-                mapListCommand.put(key,basicConfig.get(key).get(1).toString());
+                mapListCommand.put(key, basicConfig.get(key).get(1).toString());
             }
             for (String key : basicConfig.keySet()) {
                 mapListBuf.put(key, basicConfig.get(key).get(0).toString());
             }
-            int size = mapListType.size()+mapListCommand.size();
-            DefaultMutableTreeNode[] nodes = new DefaultMutableTreeNode[size+2];
+            int size = mapListType.size() + mapListCommand.size();
+            DefaultMutableTreeNode[] nodes = new DefaultMutableTreeNode[size + 2];
 
 
-int i=1, j;
+            int i = 1, j;
             nodes[0] = new DefaultMutableTreeNode("Available Command, grouped by type:");
 
             for (Object typeKey : mapListType.keySet()) {
                 nodes[i] = new DefaultMutableTreeNode(typeKey);
                 System.out.println(nodes[i]);
                 nodes[0].add(nodes[i]);
-            i++;
+                i++;
             }
-            j=i+1;
-            i=1;
+            j = i + 1;
+            i = 1;
             for (Object typeKey : mapListType.keySet()) {
 
                 for (Object commandKey : mapListCommand.keySet()) {
-                    if (typeKey==mapListBuf.get(commandKey)) {
-                        nodes[j]=new DefaultMutableTreeNode(mapListCommand.get(commandKey).toString());
+                    if (typeKey == mapListBuf.get(commandKey)) {
+                        nodes[j] = new DefaultMutableTreeNode(mapListCommand.get(commandKey).toString());
                         nodes[i].add(nodes[j]);
                         j++;
                     }
@@ -93,37 +95,37 @@ int i=1, j;
 }
 
 
- class OnlyTextTreeExample extends JFrame{
+class OnlyTextTreeExample extends JFrame {
     protected OnlyTextTreeExample() {
         super("OnlyTextTreeExample");
-        String[] strs = { "AID come back", // 0
-        "AID off transmitter", // 1
-        "Close aid system ", // 2
-        "yes", // 3
-        "no",//4
-        "show command tree", // 5
-        "Open music control", //6
-            "play music",
-            "stop music",
-            "pause music",
-            "next music",
-            "music back",
-            "close music player",
-            "Close music control", //13
-        "Open video control", //14
-            "play video",
-            "stop video",
-            "pause video",
-            "next video",
-            "video back",
-            "close video player",
-            "Close video control", //21
+        String[] strs = {"AID come back", // 0
+                "AID off transmitter", // 1
+                "Close aid system ", // 2
+                "yes", // 3
+                "no",//4
+                "show command tree", // 5
+                "Open music control", //6
+                "play music",
+                "stop music",
+                "pause music",
+                "next music",
+                "music back",
+                "close music player",
+                "Close music control", //13
+                "Open video control", //14
+                "play video",
+                "stop video",
+                "pause video",
+                "next video",
+                "video back",
+                "close video player",
+                "Close video control", //21
 
-        "Open mouse control", //22
-            "left click",
-            "right click",
-            "middle click",
-            "set position", //26
+                "Open mouse control", //22
+                "left click",
+                "right click",
+                "middle click",
+                "set position", //26
                 "Set one",
                 "Set two",
                 "Set three",
@@ -133,7 +135,7 @@ int i=1, j;
                 "Set seven",
                 "Set eight",
                 "Set nine",
-            "Close mouse control" }; // 36
+                "Close mouse control"}; // 36
 
         DefaultMutableTreeNode[] nodes = new DefaultMutableTreeNode[strs.length];
         for (int i = 0; i < strs.length; i++) {
@@ -183,7 +185,7 @@ int i=1, j;
 //        nodes[0].add(nodes[4]);
         JTree tree = new JTree(nodes[0]);
         DefaultTreeCellRenderer renderer = (DefaultTreeCellRenderer) tree
-        .getCellRenderer();
+                .getCellRenderer();
         renderer.setOpenIcon(null);
         renderer.setClosedIcon(null);
         renderer.setLeafIcon(null);
