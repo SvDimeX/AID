@@ -45,7 +45,7 @@ public class GenerateJSGF {
 
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);
-
+            int i = 0;
             bw.write("#JSGF " + version + ";");
             bw.newLine();
             bw.write("grammar " + name + ";");
@@ -58,16 +58,17 @@ public class GenerateJSGF {
                     if (typeKey == mapListBuf.get(commandKey)) {
                         bw.write(mapListCommand.get(commandKey).toString());
                         bw.write(" | ");
+                        i++;
                     }
                 }
                 bw.write("END of definition line");
                 bw.write(";");
                 bw.newLine();
             }
-
+            bw.write("/* You have "+i+" available command.*/");
             bw.close();
 
-            System.out.println("Done!");
+            logger.info("Grammar generate finish.");
 
         } catch (IOException e) {
             e.printStackTrace();

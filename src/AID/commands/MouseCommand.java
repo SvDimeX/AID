@@ -2,8 +2,8 @@ package AID.commands;
 
 import AID.form.CursorGrid;
 import AID.voice.Synthesizer;
+import org.apache.log4j.Logger;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
@@ -11,6 +11,7 @@ import java.awt.event.InputEvent;
  * Created by dima-sv on 2/7/15.
  */
 public class MouseCommand {
+    private static final Logger logger = Logger.getLogger(MouseCommand.class);
     static boolean setPosition = false;
     static Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     static int maxW = dim.width;
