@@ -6,7 +6,7 @@ public <keyboard> = Page down | Next tab | Page up | Reload page | END of defini
 public <mouse> = Left click | Right click | Middle click | Set position | Set one | Set two | Set three | Set four | Set five | Set six | Set seven | Set eight | Set nine | END of definition line;
 public <oher> = Show command tree | Open browser | Open face book page | Close browser | Open music folder | Open video folder | Open home folder | Call to mother | END of definition line;
 public <music> = Stop music | Next music | Play music | Close music player | Show music player | Pause music | Music back | END of definition line;
-public <control> = Disable video control | Enable internet control | Disable internet control | Enable video control | Enable telephone control | Enable music control | Enable mouse control | Disable telephone control | Disable music control | Disable mouse control | END of definition line;
+public <control> = Disable video control | Enable internet control | Disable internet control | Enable video control | Enable skype control | Enable music control | Enable mouse control | Disable skype control | Disable music control | Disable mouse control | END of definition line;
 public <main> = AID off transmitter | No | AID come back | Yes | Close aid system | END of definition line;
 public <video> = Show video player | Play video | Video stop | pause Video | Next video | Previous video | Forward video | Back video | Totem volume up | Totem volume down | Close totem | END of definition line;
 /* You have 65 available command.*/

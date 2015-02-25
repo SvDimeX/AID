@@ -32,14 +32,14 @@ public class LinuxLogicCore {
                 listening = false;
             }
 
-            if ((musicControl == false) && (recString.toLowerCase().contains("enable music control"))) {
+            if ((musicControl == false) && (recString.toLowerCase().contains("встановити контроль музикою"))) {
                 Synthesizer.speak("music control established");
                 musicControl = true;
             }
             if (musicControl) {
                 multimediaCommand.multimediaCommand("music", recString);
             }
-            if ((musicControl == true) && (recString.toLowerCase().contains("disable music control"))) {
+            if ((musicControl == true) && (recString.toLowerCase().contains("закрити контроль музикою"))) {
                 Synthesizer.speak("music control close");
                 musicControl = false;
             }

@@ -14,7 +14,7 @@ public class GenerateDictionary {
     private static final Logger logger = Logger.getLogger(GenerateDictionary.class);
 
     public static void generateUADict(String inputFile, String outputFile) {
-        inputFile="../out/UAmainAID.buf";
+        inputFile="src/resources/UAmainAID.buf";
         outputFile="src/resources/dict/cmudict_UA.0.6d";
         String transcription = null, slowo = null;
         Scanner scannerFile = null;
@@ -108,9 +108,9 @@ public class GenerateDictionary {
                         } else if (c_arr[i] == 'Ь') {
                             s_arr_buf[i] = "";
                         } else if (c_arr[i] == 'Ю') {
-                            s_arr_buf[i] = "J UH ";
+                            s_arr_buf[i] = "Y UH ";
                         } else if (c_arr[i] == 'Я') {
-                            s_arr_buf[i] = "J AH ";
+                            s_arr_buf[i] = "Y AH ";
                         }
                     }
                     StringBuilder builder = new StringBuilder();
@@ -124,6 +124,13 @@ public class GenerateDictionary {
                     bw.newLine();
                 }
             }
+            bw.write("END       EH N D");
+            bw.newLine();
+            bw.write("of        OW F");
+            bw.newLine();
+            bw.write("definition    D EH F IH N IH T IH OW N");
+            bw.newLine();
+            bw.write("line L AH N");
             bw.close();
 
             logger.info("Dictionary generate finish.");
@@ -149,7 +156,7 @@ public class GenerateDictionary {
             mapListBuf.put(key, map.get(key).get(0).toString());
         }
         try {
-            File file = new File("../out/UAmainAID.buf");
+            File file = new File("src/resources/UAmainAID.buf");
             if (!file.exists()) {
                 try {
                     file.createNewFile();
