@@ -22,7 +22,7 @@ public class LinuxLogicCore {
     public static void whatDoing(String recString) throws Exception {
         HashMap<String, List<String>> basicConfig = IOOperation.loadProperties("src/resources/configuration/Basic.config");
 
-        if (recString.toLowerCase().contains("Aid come back")) {
+        if (recString.toLowerCase().contains("aid come back")) {
             Synthesizer.speak("I am online and ready!");
             listening = true;
         }
@@ -94,9 +94,9 @@ public class LinuxLogicCore {
 
             multimediaCommand.multimediaCommand("volume", recString);
 
-            generalCommand.generalCommand(recString);
+//            generalCommand.generalCommand(recString);
 
-            keyBoardCommand.keyboardCommand(recString);
+//            keyBoardCommand.keyboardCommand(recString);
 
 
         }

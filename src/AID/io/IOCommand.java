@@ -1,15 +1,21 @@
 package AID.io;
 
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  * Created by dima-sv on 2/3/15.
  */
 public class IOCommand {
+    private String command;
+    private static final Logger logger = Logger.getLogger(IOCommand.class);
     public void runCommand(String command) {
-        String[] cmd = {"/bin/sh", "-c", command.toString()};
+        this.command=command.toString();
+        String[] cmd = {"/bin/sh", "-c", this.command};
 //        String s;
         try {
             Process p = Runtime.getRuntime().exec(cmd);
@@ -30,6 +36,7 @@ public class IOCommand {
         } catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
             e.printStackTrace();
+            logger.error(e);
             System.exit(-1);
         }
     }
